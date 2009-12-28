@@ -1,0 +1,16 @@
+<%% content_for(:sidebar) do %>
+  <h3>Sidebar</h3>
+  You can add information in the sidebar if you like.
+  
+  <h3>Or not</h3>
+  Or you can leave it out by removing content_for.
+<%% end %>
+
+<div class="box">
+<% for attribute in attributes -%>
+  <p>
+    <%%= form.label :<%= attribute.name %> %>
+    <%%= form.<%= attribute.field_type %> :<%= attribute.name %> %>
+  </p>
+<% end -%>
+</div>

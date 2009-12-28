@@ -1,0 +1,9 @@
+Generator to create some nifty admin scaffolds.
+
+Add this to your environment.rb (see: http://railscasts.com/episodes/39-customize-field-error)
+This will make sure the admin errors will show in correct styling.
+
+  # Change the error from div to span
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance_tag|
+    "<span class='fieldWithErrors'>#{html_tag}</span>"
+  end

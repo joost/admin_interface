@@ -1,0 +1,8 @@
+Add following routes to config/routes.rb
+
+  map.admin 'admin', :controller => 'admin'
+  map.namespace :admin do |admin|
+    # Add the following after you've used the admin_scaffold generator
+    # admin.resources :model, :collection => {:destroy_all => :delete}
+  end
+

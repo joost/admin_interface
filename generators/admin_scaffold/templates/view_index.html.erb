@@ -1,0 +1,59 @@
+<div class="contextual">
+  <%%= link_to 'New <%= singular_name %>', new_admin_<%= singular_name %>_path, :class => 'icon icon-add' %>
+</div>
+
+<h2><%= plural_name.humanize %></h2>
+
+<%% if @<%= plural_name %>.blank? %>
+  <p class="nodata">No data to display</p>
+<%% else %>
+<table class="list issues">
+  <thead>
+    <tr>
+      <th class="checkbox"><%%= image_tag "admin/true.png" %></th>
+  <% for attribute in attributes -%>
+    <% if defined?(Searchlogic) -%>
+      <th><%%= order(@search, {:by => :<%= attribute.name %>}) %></th>
+    <% else -%>
+      <th><%= attribute.column.human_name %></th>
+    <% end -%>
+  <% end -%>
+      <th></th>
+    </tr>
+  </thead>
+
+<%% form_tag(destroy_all_admin_<%= plural_name %>_path, :method => :delete) do %>
+  <tbody>
+<%% @<%= plural_name %>.each do |<%= singular_name %>| %>
+    <tr class="<%%= cycle('odd', 'even') %>">
+      <td class="checkbox">
+        <%%= check_box_tag('ids[]', <%= singular_name %>.id, nil, :id => "ids_#{<%= singular_name %>.id}") %>
+      </td>
+<% for attribute in attributes -%>
+      <td><%%=h <%= singular_name %>.<%= attribute.name %> %></td>
+<% end -%>
+      <td class="buttons">
+        <%%= link_to 'Show', [:admin, <%= singular_name %>], :class => 'icon icon-details' %>
+        <%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(<%= singular_name %>), :class => 'icon icon-edit' %>
+        <%%= link_to 'Destroy', [:admin, <%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
+      </td>
+    </tr>
+<%% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <th colspan="<%= attributes.size %>"><%%= submit_tag "Delete", :confirm => 'Are you sure?' %></th>
+      <th></th>
+    </tr>
+  </tfoot>
+<%% end %>
+</table>
+<%% end %>
+<%
+  # Remove unneeded stuff here
+  if defined?(Searchlogic) || defined?(WillPaginate)
+    # If you have WillPaginate installed (you should!)
+ %>
+    <%%= will_paginate(@<%= plural_name %>) %>
+<% end %>

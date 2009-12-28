@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Admin</title>
+    <%= stylesheet_link_tag('admin') %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <%= javascript_include_tag 'jquery.admin.js' %>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div id="wrapper">
+      <div id="top-menu">
+        <div id="loggedas">
+            Signed in as <%= '-put code here-' || link_to(current_user, current_user) -%>
+            <%= '-logout-' || link_to('logout', logout_path) %>
+        </div>
+        <ul><li><a class="home" href="/">Back to main site</a></li></ul>      
+      </div>
+      <div id="header">
+        <h1><%= link_to 'Admin', admin_path %></h1>
+        <div id="main-menu">
+          <div class="tabs" id="admin_tabnav">
+            <ul>
+              <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'admin') ? 'active' : ''))) %>
+              <% AdminController.tabs.each do |tab| %>
+                <%= content_tag(:li, link_to(tab.humanize, {:controller => "admin/#{tab}"}, :class => ((controller_name == tab) ? 'active' : ''))) %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div> 
+      <%= tag('div', {:id => 'main', :class => (has_content?(:sidebar) ? '' : 'nosidebar')}, true) %>
+        <div id="sidebar">        
+          <%= yield :sidebar %>
+        </div>
+        <div id="content">
+          <%= render_flash_messages %>
+          <%= yield %>
+        </div>
+      </div>
+
+      <div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+
+      <div id="footer">
+        Powered by <a href="mailto:team@truvolabs.com">TruvoLabs</a> &copy; 2009
+      </div>
+    </div>
+  </body>
+</html>

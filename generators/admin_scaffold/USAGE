@@ -1,0 +1,20 @@
+Description:
+    Similar to original Rails scaffold generator but for admin interface.
+    Does NOT create model since you probably have it already.
+
+    Scaffolds controller and views for use in your admin view. The resource is
+    ready to use as a starting point for your RESTful, resource-oriented
+    application.
+
+    Pass the name of the model (in singular form), either CamelCased or
+    under_scored, as the first argument, and an optional list of attribute
+    pairs.
+
+    Attribute pairs are column_name:sql_type arguments specifying the
+    model's attributes. Timestamps are added by default, so you don't have to
+    specify them by hand as 'created_at:datetime updated_at:datetime'.
+
+Examples:
+    `./script/generate admin_scaffold post`
+    `./script/generate admin_scaffold post title:string body:text published:boolean`
+    `./script/generate admin_scaffold purchase order_id:integer amount:decimal`

@@ -1,0 +1,10 @@
+<h2>New <%= singular_name %></h2>
+
+<%% form_for(@<%= singular_name %>, :url => [:admin, @<%= singular_name %>], :html => {:class => 'tabular'}) do |form| %>
+  <%%= form.error_messages %>
+
+  <%%= render :partial => form %>
+
+    <%%= form.submit 'Create' %>
+    <%%= link_to 'Back', admin_<%= plural_name %>_path %>
+<%% end %>

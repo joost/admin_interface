@@ -1,0 +1,13 @@
+<h2><%= singular_name.capitalize %> <%%= @<%= singular_name %>.id %></h2>
+
+<div class="box">
+<% for attribute in attributes -%>
+  <p>
+    <b><%= attribute.column.human_name %>:</b>
+    <%%=h @<%= singular_name %>.<%= attribute.name %> %>
+  </p>
+<% end -%>
+</div>
+
+<%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(@<%= singular_name %>) %> |
+<%%= link_to 'Back', admin_<%= plural_name %>_path %>
