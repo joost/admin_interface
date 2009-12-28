@@ -1,0 +1,74 @@
+= AdminInterface
+
+A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme.
+
+Generator to create some nifty admin scaffolds.
+
+== Install
+
+Install as plugin from Github.
+
+  ./script/plugin install git://github.com/joost/admin_interface.git
+  
+== Usage / Example
+
+=== Generate the initial framework (layout, etc.)
+
+  ./script/generate admin_interface
+  
+This will:
+* But some images (stolen from Redmine) into public/images/admin/
+* Create an AdminController in app/controllers/admin_controller.rb
+* Create a layout in app/views/layouts/admin.html.erb
+* Add some jQuery javascripts and CSS
+
+Next, add following routes to config/routes.rb
+
+  map.admin 'admin', :controller => 'admin'
+  map.namespace :admin do |admin|
+    # Add the following after you've used the admin_scaffold generator
+    # admin.resources :model, :collection => {:destroy_all => :delete}
+  end
+
+Change the app/controllers/admin_controller.rb to have a before filter
+only allowing admins to access it.
+
+=== Generate admin models and controllers
+
+Create a scaffold for a model, for example:
+  ./script/generate admin_scaffold post
+  ./script/generate admin_scaffold post title:string body:text published:boolean
+  ./script/generate admin_scaffold purchase order_id:integer amount:decimal
+
+This will:
+* Create stuff similar to original Rails scaffold generator but for admin interface.
+* NOT create model since you probably have it already.
+
+Pass the name of the model (in singular form), either CamelCased or
+under_scored, as the first argument, and an optional list of attribute
+pairs.
+
+Attribute pairs are column_name:sql_type arguments specifying the
+model's attributes. Timestamps are added by default, so you don't have to
+specify them by hand as 'created_at:datetime updated_at:datetime'.
+
+=== See it in action
+
+Go to /admin and you can see everything in action.
+
+== Error messages
+
+Add this to your environment.rb (see: http://railscasts.com/episodes/39-customize-field-error)
+This will make sure the admin errors will show in correct styling.
+
+  # Change the error from div to span
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, instance_tag|
+    "<span class='fieldWithErrors'>#{html_tag}</span>"
+  end
+
+== Kudos
+
+Kudos, credits or whatever you like more go to:
+* Jean-Philippe Lang (creator of {Redmine}[http://www.redmine.org/]).
+  
+Copyright (c) 2010 Joost Hietbrink, released under the MIT license
