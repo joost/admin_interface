@@ -2,7 +2,10 @@
 
 A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme.
 
-Generator to create some nifty admin scaffolds.
+== More info
+
+Generator to create some nifty admin scaffolds. It can work with SearchLogic and WillPaginate.
+It also has admin authentication really well implemented.
 
 == Install
 
