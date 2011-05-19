@@ -14,11 +14,11 @@ module AdminHelper
 
   # Renders flash messages
   def render_flash_messages
-    s = ''
+    flash_string = ''
     flash.each do |k,v|
-      s << content_tag('div', v, :class => "flash #{k}")
+      flash_string << content_tag('div', v, :class => "flash #{k}")
     end
-    s
+    flash_string.html_safe
   end
 
 end

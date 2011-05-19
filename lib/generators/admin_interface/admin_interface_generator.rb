@@ -31,9 +31,9 @@ class AdminInterfaceGenerator < Rails::Generators::Base
     copy_file("helpers/admin_helper.rb", "app/helpers/admin_helper.rb")
   end
 
-  def add_admin_route
-    route("namespace :admin do\n    root :to => 'base#index'\n    # resources :some_model do\n    #   delete 'delete_all', :on => :collection\n    # end\n  end")
-  end
+  # def add_admin_route
+  #   route("namespace :admin do\n    root :to => 'base#index'\n    # resources :some_model do\n    #   delete 'delete_all', :on => :collection\n    # end\n  end")
+  # end
 
   def show_readme
     readme("INSTALL")
