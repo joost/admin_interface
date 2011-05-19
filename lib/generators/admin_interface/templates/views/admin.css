@@ -720,6 +720,8 @@ vertical-align: middle;
 .icon-user_go  { background-image: url(/images/admin/user_go.png); }
 .icon-zoom_in  { background-image: url(/images/admin/zoom_in.png); }
 .icon-search  { background-image: url(/images/admin/search.png); }
+.icon-download  { background-image: url(/images/admin/download.png); }
+.icon-destroy  { background-image: url(/images/admin/destroy.png); }
 
 .icon-file { background-image: url(/images/admin/files/default.png); }
 .icon-file.text-plain { background-image: url(/images/admin/files/text.png); }
