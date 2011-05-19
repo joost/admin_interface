@@ -9,6 +9,11 @@ class AdminInterfaceGenerator < Rails::Generators::Base
     directory('images', admin_image_dir)
   end
 
+  def copy_controller_files
+    copy_file("controllers/base_controller.rb", "app/controllers/admin/base_controller.rb")
+    copy_file("controllers/resource_controller.rb", "app/controllers/admin/resource_controller.rb")    
+  end
+
   def copy_view_files
     copy_file("views/layout.html.erb", "app/views/layouts/admin.html.erb")
     copy_file("views/index.html.erb", "app/views/admin/index.html.erb")

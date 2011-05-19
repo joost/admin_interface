@@ -1,3 +1,7 @@
+<div class="contextual">
+  <%%= link_to 'Destroy <%= singular_name %>', {:url => [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete}, {:class => 'icon icon-del'} %>
+</div>
+
 <h2><%= singular_name.capitalize %> <%%= @<%= singular_name %>.id %></h2>
 
 <div class="box">
