@@ -1,11 +1,13 @@
 # The AdminController is the parent class that makes sure all administrator actions
 # require a logged-in User with an admin Role.
-class AdminController < ApplicationController
+class Admin::BaseController < ApplicationController
 
   layout 'admin'
 
   # Replace this with your own authentication / authorization stuff
   before_filter :http_authentication
+  # Example when using Devise gem
+  # before_filter :authenticate_admin!
 
   # Add controller names you want to include as tab. Eg.
   #  @@tabs = %w(messages) # if you created a Admin::MessagesController using the admin_scaffold generator.

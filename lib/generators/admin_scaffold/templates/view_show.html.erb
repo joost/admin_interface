@@ -3,7 +3,7 @@
 <div class="box">
 <% for attribute in attributes -%>
   <p>
-    <b><%= attribute.column.human_name %>:</b>
+    <b><%= attribute.human_name %>:</b>
     <%%=h @<%= singular_name %>.<%= attribute.name %> %>
   </p>
 <% end -%>

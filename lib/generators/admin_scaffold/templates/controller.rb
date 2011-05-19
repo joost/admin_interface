@@ -1,4 +1,4 @@
-class Admin::<%= controller_class_name %>Controller < AdminController
+class Admin::<%= controller_class_name %>Controller < Admin::BaseController
   
   before_filter :load_<%= file_name %>, :only => [:show, :edit, :destroy]
   

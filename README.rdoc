@@ -1,6 +1,6 @@
 = AdminInterface
 
-A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme.
+A Rails admin interface generator for Rails 3. Theme stolen from Redmine. Similar to web-app-theme.
 
 == More info
 
@@ -9,39 +9,49 @@ It also has admin authentication really well implemented.
 
 == Install
 
-Install as plugin from Github.
+Add following to your Gemfile
 
-  ./script/plugin install git://github.com/joost/admin_interface.git
+  group :development, :test do
+    # Generators
+    gem 'admin_interface'
+  end
+
+Or install as plugin from Github.
+
+  rails plugin install git://github.com/joost/admin_interface.git
   
 == Usage / Example
 
 === Generate the initial framework (layout, etc.)
 
-  ./script/generate admin_interface
+  rails generate admin_interface
   
 This will:
 * But some images (stolen from Redmine) into public/images/admin/
-* Create an AdminController in app/controllers/admin_controller.rb
+* Create an Admin::BaseController in app/controllers/admin/base_controller.rb
 * Create a layout in app/views/layouts/admin.html.erb
 * Add some jQuery javascripts and CSS
 
-Next, add following routes to config/routes.rb
+Next, add following routes to config/routes.rb.
 
-  map.admin 'admin', :controller => 'admin'
-  map.namespace :admin do |admin|
+  namespace :admin do
+    root :to => 'base#index'
     # Add the following after you've used the admin_scaffold generator
-    # admin.resources :model, :collection => {:destroy_all => :delete}
+    resources :model do
+      delete 'delete_all', :on => :collection
+    end
   end
 
-Change the app/controllers/admin_controller.rb to have a before filter
+Change the app/controllers/admin/base_controller.rb to have a before filter
 only allowing admins to access it.
 
 === Generate admin models and controllers
 
 Create a scaffold for a model, for example:
-  ./script/generate admin_scaffold post
-  ./script/generate admin_scaffold post title:string body:text published:boolean
-  ./script/generate admin_scaffold purchase order_id:integer amount:decimal
+
+  rails generate admin_scaffold post
+  rails generate admin_scaffold post title:string body:text published:boolean
+  rails generate admin_scaffold purchase order_id:integer amount:decimal
 
 This will:
 * Create stuff similar to original Rails scaffold generator but for admin interface.

@@ -719,6 +719,7 @@ vertical-align: middle;
 .icon-email  { background-image: url(/images/admin/email.png); }
 .icon-user_go  { background-image: url(/images/admin/user_go.png); }
 .icon-zoom_in  { background-image: url(/images/admin/zoom_in.png); }
+.icon-search  { background-image: url(/images/admin/search.png); }
 
 .icon-file { background-image: url(/images/admin/files/default.png); }
 .icon-file.text-plain { background-image: url(/images/admin/files/text.png); }

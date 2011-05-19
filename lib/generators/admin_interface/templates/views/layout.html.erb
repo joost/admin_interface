@@ -24,7 +24,7 @@
           <div class="tabs" id="admin_tabnav">
             <ul>
               <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'admin') ? 'active' : ''))) %>
-              <% AdminController.tabs.each do |tab| %>
+              <% Admin::BaseController.tabs.each do |tab| %>
                 <%= content_tag(:li, link_to(tab.humanize, {:controller => "admin/#{tab}"}, :class => ((controller_name == tab) ? 'active' : ''))) %>
               <% end %>
             </ul>

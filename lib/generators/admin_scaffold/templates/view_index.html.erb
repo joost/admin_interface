@@ -15,7 +15,7 @@
     <% if defined?(Searchlogic) -%>
       <th><%%= order(@search, {:by => :<%= attribute.name %>}) %></th>
     <% else -%>
-      <th><%= attribute.column.human_name %></th>
+      <th><%= attribute.human_name %></th>
     <% end -%>
   <% end -%>
       <th></th>
