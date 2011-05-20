@@ -20,11 +20,11 @@
         <ul><li><a class="home" href="/">Back to main site</a></li></ul>      
       </div>
       <div id="header">
-        <h1><%= link_to 'Admin', admin_path %></h1>
+        <h1><%= link_to 'Admin', admin_root_path %></h1>
         <div id="main-menu">
           <div class="tabs" id="admin_tabnav">
             <ul>
-              <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'admin') ? 'active' : ''))) %>
+              <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'admin') ? 'selected' : ''))) %>
               <% Admin::BaseController.tabs.each do |tab| %>
                 <%= content_tag(:li, link_to(tab.humanize, {:controller => "admin/#{tab}"}, :class => ((controller_name == tab) ? 'active' : ''))) %>
               <% end %>
