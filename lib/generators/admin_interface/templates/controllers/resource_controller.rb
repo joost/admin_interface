@@ -20,6 +20,7 @@ class Admin::ResourceController < Admin::BaseController
 
   def create
     @resource = resource_class.new(params_hash_for_resource)
+    instance_variable_set("@#{resource_instance_variable_name}", @resource)
 
     if @resource.save
       redirect_to([:admin, @resource], :notice => 'Object was successfully created.')
