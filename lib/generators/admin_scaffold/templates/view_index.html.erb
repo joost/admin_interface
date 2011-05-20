@@ -22,7 +22,7 @@
     </tr>
   </thead>
 
-<%% form_tag(destroy_all_admin_<%= plural_name %>_path, :method => :delete) do %>
+<%%= form_tag(destroy_all_admin_<%= plural_name %>_path, :method => :delete) do %>
   <tbody>
 <%% @<%= plural_name %>.each do |<%= singular_name %>| %>
     <tr class="<%%= cycle('odd', 'even') %>">
