@@ -5,8 +5,9 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>Admin</title>
     <%= stylesheet_link_tag('admin') %>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag 'jquery.admin.js' %>
+    <%= csrf_meta_tag %> 
   </head>
   <body>
     <a name="top"></a>
