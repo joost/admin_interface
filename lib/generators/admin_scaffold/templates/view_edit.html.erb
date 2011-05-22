@@ -1,3 +1,8 @@
+<div class="contextual">
+  <%%= link_to 'Show', [:admin, @<%= singular_name %>], :class => 'icon icon-details' %>
+  <%%= link_to 'Destroy', [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
+</div>
+
 <h2>Editing <%= singular_name %></h2>
 
 <%%= form_for(@<%= singular_name %>, :url => [:admin, @<%= singular_name %>], :html => {:class => 'tabular'}) do |form| %>
@@ -6,6 +11,5 @@
   <%%= render :partial => form %>
 
   <%%= form.submit 'Update' %>
-  <%%= link_to 'Show', [:admin, @<%= singular_name %>] %>
   <%%= link_to 'Back', admin_<%= plural_name %>_path %>
 <%% end %>
