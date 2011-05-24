@@ -71,13 +71,16 @@ Go to /admin and you can see everything in action.
 
 == Error messages
 
-Add this to your environment.rb (see: http://railscasts.com/episodes/39-customize-field-error)
+Add this to a initializer or in your environment.rb (see: http://railscasts.com/episodes/39-customize-field-error)
 This will make sure the admin errors will show in correct styling.
 
   # Change the error from div to span
   ActionView::Base.field_error_proc = Proc.new do |html_tag, instance_tag|
-    "<span class='fieldWithErrors'>#{html_tag}</span>"
+    "<span class='field_with_errors'>#{html_tag}</span>".html_safe
   end
+
+Note that this might affect the rest of your application. A different solution is
+welcome!
 
 == Kudos
 
