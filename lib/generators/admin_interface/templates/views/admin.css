@@ -12,8 +12,20 @@ label.disabled {
 .icon-search  { background-image: url(/images/admin/search.png); }
 .icon-download  { background-image: url(/images/admin/download.png); }
 .icon-destroy  { background-image: url(/images/admin/destroy.png); }
+.icon-document  { background-image: url(/images/admin/document.png); }
+.icon-crop  { background-image: url(/images/admin/crop.png); }
+.icon-mail  { background-image: url(/images/admin/mail.png); }
 
 tfoot th {
+  text-align: left;
+}
+
+/* Flash style, not only error class but also alert class (style either like warning or error) */
+div.flash.alert {
+  background: url(/images/admin/warning.png) 8px 5px no-repeat;
+  background-color: #FFEBC1;
+  border-color: #FDBF3B;
+  color: #A6750C;
   text-align: left;
 }
 
