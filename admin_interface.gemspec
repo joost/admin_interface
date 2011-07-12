@@ -2,16 +2,21 @@
 $:.push File.expand_path("../lib", __FILE__)
 require "devise/version"
 
-Gem::Specification.new do |s|
-  s.name = "admin_interface"
-  s.version = '1.0.0'
-  s.platform = Gem::Platform::RUBY
-  s.summary = "A Rails admin interface generator. Theme stolen from Redmine."
-  s.email = "joost@joopp.com"
-  s.homepage = "http://github.com/joost/admin_interface"
-  s.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme."
-  s.authors = ['Joost Hietbrink']
+Gem::Specification.new do |spec|
+  spec.name = "admin_interface"
+  spec.version = '1.1.0'
+  spec.platform = Gem::Platform::RUBY
+  spec.summary = "A Rails admin interface generator. Theme stolen from Redmine."
+  spec.email = "joost@joopp.com"
+  spec.homepage = "http://github.com/joost/admin_interface"
+  spec.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme but better ;)."
+  spec.authors = ['Joost Hietbrink']
 
-  s.files = `git ls-files`.split("\n")
-  s.require_paths = ["lib"]
+  # kaminari (pagination), meta_search (search), inherited_resources (coolness)
+  spec.add_dependency('kaminari', '>= 0.12.4')
+  spec.add_dependency('meta_search', '>= 1.0.5')
+  spec.add_dependency('inherited_resources', '>= 1.2.2')
+
+  spec.files = `git ls-files`.split("\n")
+  spec.require_paths = ["lib"]
 end

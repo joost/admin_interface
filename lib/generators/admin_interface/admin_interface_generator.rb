@@ -28,7 +28,7 @@ class AdminInterfaceGenerator < Rails::Generators::Base
   end
 
   def copy_helper_files
-    copy_file("helpers/admin_helper.rb", "app/helpers/admin_helper.rb")
+    copy_file("helpers/admin/base_helper.rb", "app/helpers/admin/base_helper.rb")
   end
 
   # def add_admin_route

@@ -1,5 +1,12 @@
 <div class="contextual">
   <%%= link_to 'New <%= singular_name %>', new_admin_<%= singular_name %>_path, :class => 'icon icon-add' %>
+  | <%%= form_for @search, :url => collection_url do |f| %>
+      <%%
+        # Check https://github.com/ernie/meta_search for options.
+        # Simply change :id_equals into :name_contains, etc.
+      %>
+      <%%= f.text_field :id_equals, :placeholder => 'Search by ID' %>
+    <%% end %>
 </div>
 
 <h2><%= plural_name.humanize %></h2>
@@ -12,11 +19,7 @@
     <tr>
       <th class="checkbox"><%%= image_tag "admin/true.png" %></th>
   <% for attribute in attributes -%>
-    <% if defined?(Searchlogic) -%>
-      <th><%%= order(@search, {:by => :<%= attribute.name %>}) %></th>
-    <% else -%>
-      <th><%= attribute.human_name %></th>
-    <% end -%>
+      <th><%%= sort_link(@search, :<%= attribute.name %>) %></th>
   <% end -%>
       <th></th>
     </tr>
@@ -50,10 +53,4 @@
 <%% end %>
 </table>
 <%% end %>
-<%
-  # Remove unneeded stuff here
-  if defined?(Searchlogic) || defined?(WillPaginate)
-    # If you have WillPaginate installed (you should!)
- %>
-    <%%= will_paginate(@<%= plural_name %>) %>
-<% end %>
+<%%= navigate(@<%= plural_name %>) %>
