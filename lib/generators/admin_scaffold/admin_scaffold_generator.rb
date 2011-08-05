@@ -20,6 +20,15 @@ class AdminScaffoldGenerator < Rails::Generators::NamedBase
   alias_method  :controller_file_name,  :controller_file_name
   alias_method  :controller_table_name, :controller_plural_name
 
+  def check_class_collisions # TODO
+    # Check for class naming collisions.
+    # class_collisions class_path, "Admin::#{class_name}Controller"
+  end
+
+  def copy_controller_files
+    template 'controller.rb', File.join(CONTROLLER_PATH, class_path, "#{controller_file_name}_controller.rb")
+  end
+
   def create_admin_scaffold
     @name = file_name
     

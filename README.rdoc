@@ -16,6 +16,12 @@ Add following to your Gemfile
     gem 'admin_interface'
   end
 
+AdminInterface uses several gems. So put these in your Gemfile
+
+  gem 'inherited_resources'
+  gem 'meta_search'
+  gem 'kaminari'
+
 Or install as plugin from Github.
 
   rails plugin install git://github.com/joost/admin_interface.git
@@ -38,7 +44,7 @@ Next, add following routes to config/routes.rb.
     root :to => 'base#index'
     # Add the following after you've used the admin_scaffold generator
     resources :model do
-      delete 'delete_all', :on => :collection
+      delete 'destroy_all', :on => :collection
     end
   end
 

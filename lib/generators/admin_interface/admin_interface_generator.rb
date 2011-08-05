@@ -16,7 +16,7 @@ class AdminInterfaceGenerator < Rails::Generators::Base
 
   def copy_view_files
     copy_file("views/layout.html.erb", "app/views/layouts/admin.html.erb")
-    copy_file("views/index.html.erb", "app/views/admin/index.html.erb")
+    copy_file("views/index.html.erb", "app/views/admin/base/index.html.erb")
   end
 
   def copy_javascript_files
@@ -31,9 +31,14 @@ class AdminInterfaceGenerator < Rails::Generators::Base
     copy_file("helpers/admin/base_helper.rb", "app/helpers/admin/base_helper.rb")
   end
 
-  # def add_admin_route
-  #   route("namespace :admin do\n    root :to => 'base#index'\n    # resources :some_model do\n    #   delete 'delete_all', :on => :collection\n    # end\n  end")
-  # end
+  def add_admin_route
+    route "namespace :admin do"
+    route "  root :to => 'base#index"
+    route "  # resources :some_model do"
+    route "  #   delete 'delete_all', :on => :collection"
+    route "  # end"
+    route "end"
+  end
 
   def show_readme
     readme("INSTALL")

@@ -407,8 +407,10 @@ ul.properties li span {font-style:italic;}
 
 #workflow_copy_form select { width: 200px; }
 
-.pagination {font-size: 90%}
-p.pagination {margin-top:8px;}
+.pagination, .perination { font-size: 90% }
+.navigation nav {
+  display: inline;
+}
 
 /***** Tabular forms ******/
 .tabular p{
