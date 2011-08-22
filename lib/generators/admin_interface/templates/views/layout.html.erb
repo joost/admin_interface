@@ -4,9 +4,8 @@
   <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <title>Admin</title>
-    <%= stylesheet_link_tag('admin') %>
-    <%= javascript_include_tag :defaults %>
-    <%= javascript_include_tag 'jquery.admin.js' %>
+    <%= stylesheet_link_tag 'admin' %>
+    <%= javascript_include_tag :application, 'jquery.admin.js' %>
     <%= csrf_meta_tag %> 
   </head>
   <body>
@@ -24,9 +23,9 @@
         <div id="main-menu">
           <div class="tabs" id="admin_tabnav">
             <ul>
-              <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'admin') ? 'selected' : ''))) %>
+              <%= content_tag(:li, link_to('Overview', '/admin', :class => ((controller_name == 'base') ? 'selected' : ''))) %>
               <% Admin::BaseController.tabs.each do |tab| %>
-                <%= content_tag(:li, link_to(tab.humanize, {:controller => "admin/#{tab}"}, :class => ((controller_name == tab) ? 'active' : ''))) %>
+                <%= content_tag(:li, link_to(tab.humanize, [:admin, tab], :class => ((controller_name == tab) ? 'selected' : ''))) %>
               <% end %>
             </ul>
           </div>

@@ -9,7 +9,12 @@
     <%% end %>
 </div>
 
-<h2><%= plural_name.humanize %></h2>
+<h2>
+  <%= # FIXME: parent? doesn't always work :S
+    link_to(parent.to_s, [:admin, parent]) + " &gt;".html_safe if defined?(parent) && parent?
+   %>
+  <%= plural_name.humanize %>
+</h2>
 
 <%% if @<%= plural_name %>.blank? %>
   <p class="nodata">No data to display</p>

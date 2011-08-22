@@ -3,6 +3,9 @@ class Admin::ResourceController < Admin::BaseController
   inherit_resources # gem
   defaults :route_prefix => 'admin'
 
+  # inherited_resources options
+  # nested_belongs_to :user, :optional => true
+
   def destroy_all
     destroyed_resources = resource_class.destroy_all(:id => params[:ids])
     flash[:notice] = "#{destroyed_resources.size} objects destroyed."
