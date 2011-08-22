@@ -1,20 +1,27 @@
 = AdminInterface
 
-A Rails admin interface generator for Rails 3. Theme stolen from Redmine. Similar to web-app-theme.
+A Rails admin interface generator for Rails 3.1+. Theme stolen from Redmine. Similar to web-app-theme.
 
 == More info
 
-Generator to create some nifty admin scaffolds. It can work with SearchLogic and WillPaginate.
+Generator to create some nifty admin scaffolds. It can work with MetaSearch and Kaminari.
 It also has admin authentication really well implemented.
 
 == Install
 
+=== Rails 3.1
+
+You should be using v1.2.0+.
+
+  gem "admin_interface"
+
+=== Earlier Rails Versions
+
+If you're using Rails 3.0 or earlier use
+
 Add following to your Gemfile
 
-  group :development, :test do
-    # Generators
-    gem 'admin_interface'
-  end
+  gem "admin_interface", "~> 1.0.0"
 
 AdminInterface uses several gems. So put these in your Gemfile
 
@@ -71,9 +78,17 @@ Attribute pairs are column_name:sql_type arguments specifying the
 model's attributes. Timestamps are added by default, so you don't have to
 specify them by hand as 'created_at:datetime updated_at:datetime'.
 
+=== Customize
+
+You should customize your admin area so it can be more functional and nicely looking.
+
 === See it in action
 
 Go to /admin and you can see everything in action.
+
+== Screenshot
+
+https://raw.github.com/joost/admin_interface/master/doc/screenshot.png
 
 == Error messages
 
