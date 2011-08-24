@@ -9,12 +9,12 @@ label.disabled {
 }
 
 /***** Custom additions to Redmine *****/
-.icon-search  { background-image: asset-url('admin/search.png', image); }
-.icon-download  { background-image: asset-url('admin/download.png', image); }
-.icon-destroy  { background-image: asset-url('admin/destroy.png', image); }
-.icon-document  { background-image: asset-url('admin/document.png', image); }
-.icon-crop  { background-image: asset-url('admin/crop.png', image); }
-.icon-mail  { background-image: asset-url('admin/mail.png', image); }
+.icon-search  { background-image: asset_url('admin/search.png', image); }
+.icon-download  { background-image: asset_url('admin/download.png', image); }
+.icon-destroy  { background-image: asset_url('admin/destroy.png', image); }
+.icon-document  { background-image: asset_url('admin/document.png', image); }
+.icon-crop  { background-image: asset_url('admin/crop.png', image); }
+.icon-mail  { background-image: asset_url('admin/mail.png', image); }
 
 tfoot th {
   text-align: left;
@@ -22,7 +22,7 @@ tfoot th {
 
 /* Flash style, not only error class but also alert class (style either like warning or error) */
 div.flash.alert {
-  background: asset-url('admin/warning.png', image) 8px 5px no-repeat;
+  background: asset_url('admin/warning.png', image) 8px 5px no-repeat;
   background-color: #FFEBC1;
   border-color: #FDBF3B;
   color: #A6750C;
@@ -33,7 +33,7 @@ div.flash.alert {
 
 /*
 * The application needs to be above the theme css (it is overwritten).
-* The 'asset-url('admin/' has been replaced by 'asset-url('admin/'.
+* The 'asset_url('admin/' has been replaced by 'asset_url('admin/'.
 *
 */
 
@@ -92,19 +92,19 @@ h4, .wiki h3 {font-size: 13px;padding: 2px 10px 1px 0px;margin-bottom: 5px; bord
 #admin-menu li {margin: 0;  padding: 0 0 12px 0; list-style-type:none;}
 
 #admin-menu a { background-position: 0% 40%; background-repeat: no-repeat; padding-left: 20px; padding-top: 2px; padding-bottom: 3px;}
-#admin-menu a.projects { background-image: asset-url('admin/projects.png', image); }
-#admin-menu a.users { background-image: asset-url('admin/user.png', image); }
-#admin-menu a.groups { background-image: asset-url('admin/group.png', image); }
-#admin-menu a.roles { background-image: asset-url('admin/database_key.png', image); }
-#admin-menu a.trackers { background-image: asset-url('admin/ticket.png', image); }
-#admin-menu a.issue_statuses { background-image: asset-url('admin/ticket_edit.png', image); }
-#admin-menu a.workflows { background-image: asset-url('admin/ticket_go.png', image); }
-#admin-menu a.custom_fields { background-image: asset-url('admin/textfield.png', image); }
-#admin-menu a.enumerations { background-image: asset-url('admin/text_list_bullets.png', image); }
-#admin-menu a.settings { background-image: asset-url('admin/changeset.png', image); }
-#admin-menu a.plugins { background-image: asset-url('admin/plugin.png', image); }
-#admin-menu a.info { background-image: asset-url('admin/help.png', image); }
-#admin-menu a.server_authentication { background-image: asset-url('admin/server_key.png', image); }
+#admin-menu a.projects { background-image: asset_url('admin/projects.png', image); }
+#admin-menu a.users { background-image: asset_url('admin/user.png', image); }
+#admin-menu a.groups { background-image: asset_url('admin/group.png', image); }
+#admin-menu a.roles { background-image: asset_url('admin/database_key.png', image); }
+#admin-menu a.trackers { background-image: asset_url('admin/ticket.png', image); }
+#admin-menu a.issue_statuses { background-image: asset_url('admin/ticket_edit.png', image); }
+#admin-menu a.workflows { background-image: asset_url('admin/ticket_go.png', image); }
+#admin-menu a.custom_fields { background-image: asset_url('admin/textfield.png', image); }
+#admin-menu a.enumerations { background-image: asset_url('admin/text_list_bullets.png', image); }
+#admin-menu a.settings { background-image: asset_url('admin/changeset.png', image); }
+#admin-menu a.plugins { background-image: asset_url('admin/plugin.png', image); }
+#admin-menu a.info { background-image: asset_url('admin/help.png', image); }
+#admin-menu a.server_authentication { background-image: asset_url('admin/server_key.png', image); }
 
 #main {background-color:#EEEEEE;}
 
@@ -130,7 +130,7 @@ html>body #content { min-height: 600px; }
 #login-form label {font-weight: bold;}
 #login-form input#username, #login-form input#password { width: 300px; }
 
-input#openid_url { background: asset-url('admin/openid-bg.gif', image) no-repeat; background-color: #fff; background-position: 0 50%; padding-left: 18px; }
+input#openid_url { background: asset_url('admin/openid-bg.gif', image) no-repeat; background-color: #fff; background-position: 0 50%; padding-left: 18px; }
 
 .clear:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
@@ -153,7 +153,7 @@ table.list caption { text-align: left; padding: 0.5em 0.5em 0.5em 0; }
 
 tr.project td.name a { white-space:nowrap; }
 
-tr.project.idnt td.name span {background: asset-url('admin/bullet_arrow_right.png', image) no-repeat 0 50%; padding-left: 16px;}
+tr.project.idnt td.name span {background: asset_url('admin/bullet_arrow_right.png', image) no-repeat 0 50%; padding-left: 16px;}
 tr.project.idnt-1 td.name {padding-left: 0.5em;}
 tr.project.idnt-2 td.name {padding-left: 2em;}
 tr.project.idnt-3 td.name {padding-left: 3.5em;}
@@ -169,7 +169,7 @@ tr.issue td.subject, tr.issue td.category, td.assigned_to { white-space: normal;
 tr.issue td.subject { text-align: left; }
 tr.issue td.done_ratio table.progress { margin-left:auto; margin-right: auto;}
 
-tr.issue.idnt td.subject a {background: asset-url('admin/bullet_arrow_right.png', image) no-repeat 0 50%; padding-left: 16px;}
+tr.issue.idnt td.subject a {background: asset_url('admin/bullet_arrow_right.png', image) no-repeat 0 50%; padding-left: 16px;}
 tr.issue.idnt-1 td.subject {padding-left: 0.5em;}
 tr.issue.idnt-2 td.subject {padding-left: 2em;}
 tr.issue.idnt-3 td.subject {padding-left: 3.5em;}
@@ -188,8 +188,8 @@ tr.entry td.revision, tr.entry td.author { text-align: center; }
 tr.entry td.age { text-align: right; }
 tr.entry.file td.filename a { margin-left: 16px; }
 
-tr span.expander {background-image: asset-url('admin/bullet_toggle_plus.png', image); padding-left: 8px; margin-left: 0; cursor: pointer;}
-tr.open span.expander {background-image: asset-url('admin/bullet_toggle_minus.png', image);}
+tr span.expander {background-image: asset_url('admin/bullet_toggle_plus.png', image); padding-left: 8px; margin-left: 0; cursor: pointer;}
+tr.open span.expander {background-image: asset_url('admin/bullet_toggle_minus.png', image);}
 
 tr.changeset td.author { text-align: center; width: 15%; }
 tr.changeset td.committed_on { text-align: center; width: 15%; }
@@ -204,12 +204,12 @@ tr.message { height: 2.6em; }
 tr.message td.subject { padding-left: 20px; }
 tr.message td.created_on { white-space: nowrap; }
 tr.message td.last_message { font-size: 80%; white-space: nowrap; }
-tr.message.locked td.subject { background: asset-url('admin/locked.png', image) no-repeat 0 1px; }
-tr.message.sticky td.subject { background: asset-url('admin/bullet_go.png', image) no-repeat 0 1px; font-weight: bold; }
+tr.message.locked td.subject { background: asset_url('admin/locked.png', image) no-repeat 0 1px; }
+tr.message.sticky td.subject { background: asset_url('admin/bullet_go.png', image) no-repeat 0 1px; font-weight: bold; }
 
 tr.version.closed, tr.version.closed a { color: #999; }
 tr.version td.name { padding-left: 20px; }
-tr.version.shared td.name { background: asset-url('admin/link.png', image) no-repeat 0% 70%; }
+tr.version.shared td.name { background: asset_url('admin/link.png', image) no-repeat 0% 70%; }
 tr.version td.date, tr.version td.status, tr.version td.sharing { text-align: center; }
 
 tr.user td { width:13%; }
@@ -242,23 +242,23 @@ table p {margin:0;}
 .even {background-color: #fff;}
 
 a.sort { padding-right: 16px; background-position: 100% 50%; background-repeat: no-repeat; }
-a.sort.asc  { background-image: asset-url('admin/sort_asc.png', image); }
-a.sort.desc { background-image: asset-url('admin/sort_desc.png', image); }
+a.sort.asc  { background-image: asset_url('admin/sort_asc.png', image); }
+a.sort.desc { background-image: asset_url('admin/sort_desc.png', image); }
 
 table.attributes { width: 100% }
 table.attributes th { vertical-align: top; text-align: left; }
 table.attributes td { vertical-align: top; }
 
-table.boards a.board, h3.comments { background: asset-url('admin/comment.png', image) no-repeat 0% 50%; padding-left: 20px; }
+table.boards a.board, h3.comments { background: asset_url('admin/comment.png', image) no-repeat 0% 50%; padding-left: 20px; }
 
 td.center {text-align:center;}
 
-h3.version { background: asset-url('admin/package.png', image) no-repeat 0% 50%; padding-left: 20px; }
+h3.version { background: asset_url('admin/package.png', image) no-repeat 0% 50%; padding-left: 20px; }
 
-div.issues h3 { background: asset-url('admin/ticket.png', image) no-repeat 0% 50%; padding-left: 20px; }
-div.members h3 { background: asset-url('admin/group.png', image) no-repeat 0% 50%; padding-left: 20px; }
-div.news h3 { background: asset-url('admin/news.png', image) no-repeat 0% 50%; padding-left: 20px; }
-div.projects h3 { background: asset-url('admin/projects.png', image) no-repeat 0% 50%; padding-left: 20px; }
+div.issues h3 { background: asset_url('admin/ticket.png', image) no-repeat 0% 50%; padding-left: 20px; }
+div.members h3 { background: asset_url('admin/group.png', image) no-repeat 0% 50%; padding-left: 20px; }
+div.news h3 { background: asset_url('admin/news.png', image) no-repeat 0% 50%; padding-left: 20px; }
+div.projects h3 { background: asset_url('admin/projects.png', image) no-repeat 0% 50%; padding-left: 20px; }
 
 #watchers ul {margin: 0;  padding: 0;}
 #watchers li {list-style-type:none;margin: 0px 2px 0px 0px; padding: 0px 0px 0px 0px;}
@@ -318,8 +318,8 @@ div.issue div.subject h3 {margin: 0; margin-bottom: 0.1em;}
 #issue_tree td.checkbox {display:none;}
 
 fieldset.collapsible { border-width: 1px 0 0 0; font-size: 0.9em; }
-fieldset.collapsible legend { padding-left: 16px; background: asset-url('admin/arrow_expanded.png', image) no-repeat 0% 40%; cursor:pointer; }
-fieldset.collapsible.collapsed legend { background-image: asset-url('admin/arrow_collapsed.png', image); }
+fieldset.collapsible legend { padding-left: 16px; background: asset_url('admin/arrow_expanded.png', image) no-repeat 0% 40%; cursor:pointer; }
+fieldset.collapsible.collapsed legend { background-image: asset_url('admin/arrow_collapsed.png', image); }
 
 fieldset#date-range p { margin: 2px 0 2px 0; }
 fieldset#filters table { border-collapse: collapse; }
@@ -348,21 +348,21 @@ div#search-results-counts {float:right;}
 div#search-results-counts ul { margin-top: 0.5em; }
 div#search-results-counts  li { list-style-type:none; float: left; margin-left: 1em; }
   
-dt.issue { background-image: asset-url('admin/ticket.png', image); }
-dt.issue-edit { background-image: asset-url('admin/ticket_edit.png', image); }
-dt.issue-closed { background-image: asset-url('admin/ticket_checked.png', image); }
-dt.issue-note { background-image: asset-url('admin/ticket_note.png', image); }
-dt.changeset { background-image: asset-url('admin/changeset.png', image); }
-dt.news { background-image: asset-url('admin/news.png', image); }
-dt.message { background-image: asset-url('admin/message.png', image); }
-dt.reply { background-image: asset-url('admin/comments.png', image); }
-dt.wiki-page { background-image: asset-url('admin/wiki_edit.png', image); }
-dt.attachment { background-image: asset-url('admin/attachment.png', image); }
-dt.document { background-image: asset-url('admin/document.png', image); }
-dt.project { background-image: asset-url('admin/projects.png', image); }
-dt.time-entry { background-image: asset-url('admin/time.png', image); }
+dt.issue { background-image: asset_url('admin/ticket.png', image); }
+dt.issue-edit { background-image: asset_url('admin/ticket_edit.png', image); }
+dt.issue-closed { background-image: asset_url('admin/ticket_checked.png', image); }
+dt.issue-note { background-image: asset_url('admin/ticket_note.png', image); }
+dt.changeset { background-image: asset_url('admin/changeset.png', image); }
+dt.news { background-image: asset_url('admin/news.png', image); }
+dt.message { background-image: asset_url('admin/message.png', image); }
+dt.reply { background-image: asset_url('admin/comments.png', image); }
+dt.wiki-page { background-image: asset_url('admin/wiki_edit.png', image); }
+dt.attachment { background-image: asset_url('admin/attachment.png', image); }
+dt.document { background-image: asset_url('admin/document.png', image); }
+dt.project { background-image: asset_url('admin/projects.png', image); }
+dt.time-entry { background-image: asset_url('admin/time.png', image); }
 
-#search-results dt.issue.closed { background-image: asset-url('admin/ticket_checked.png', image); }
+#search-results dt.issue.closed { background-image: asset_url('admin/ticket_checked.png', image); }
 
 div#roadmap .related-issues { margin-bottom: 1em; }
 div#roadmap .related-issues td.checkbox { display: none; }
@@ -390,7 +390,7 @@ ul.projects ul.projects { border-left: 3px solid #e0e0e0; }
 ul.projects li.root { list-style-type:none; margin-bottom: 1em; }
 ul.projects li.child { list-style-type:none; margin-top: 1em;}
 ul.projects div.root a.project { font-family: "Trebuchet MS", Verdana, sans-serif; font-weight: bold; font-size: 16px; margin: 0 0 10px 0; }
-.my-project { padding-left: 18px; background: asset-url('admin/fav.png', image) no-repeat 0 50%; }
+.my-project { padding-left: 18px; background: asset_url('admin/fav.png', image) no-repeat 0 50%; }
 
 #tracker_project_ids ul { margin: 0;  padding-left: 1em; }
 #tracker_project_ids li { list-style-type:none; } 
@@ -456,7 +456,7 @@ width: auto;
 
 input#time_entry_comments { width: 90%;}
 
-#preview fieldset {margin-top: 1em; background: asset-url('admin/draft.png', image)}
+#preview fieldset {margin-top: 1em; background: asset_url('admin/draft.png', image)}
 
 .tabular.settings p{ padding-left: 300px; }
 .tabular.settings label{ margin-left: -300px; width: 295px; }
@@ -478,7 +478,7 @@ div.attachments span.author { font-size: 0.9em; color: #888; }
 p.other-formats { text-align: right; font-size:0.9em; color: #666; }
 .other-formats span + span:before { content: "| "; }
 
-a.atom { background: asset-url('admin/feed.png', image) no-repeat 1px 50%; padding: 2px 0px 3px 16px; }
+a.atom { background: asset_url('admin/feed.png', image) no-repeat 1px 50%; padding: 2px 0px 3px 16px; }
 
 /* Project members tab */
 div#tab-content-members .splitcontentleft, div#tab-content-memberships .splitcontentleft, div#tab-content-users .splitcontentleft { width: 64% }
@@ -488,7 +488,7 @@ div#tab-content-members fieldset legend, div#tab-content-memberships fieldset le
 div#tab-content-members fieldset label, div#tab-content-memberships fieldset label, div#tab-content-users fieldset label { display: block; }
 div#tab-content-members fieldset div, div#tab-content-users fieldset div { max-height: 400px; overflow:auto; }
 
-table.members td.group { padding-left: 20px; background: asset-url('admin/group.png', image) no-repeat 0% 50%; }
+table.members td.group { padding-left: 20px; background: asset_url('admin/group.png', image) no-repeat 0% 50%; }
 
 input#principal_search, input#user_search {width:100%}
 
@@ -505,21 +505,21 @@ input#principal_search, input#user_search {width:100%}
 div.flash {margin-top: 8px;}
 
 div.flash.error, #errorExplanation {
-	background: asset-url('admin/exclamation.png', image) 8px 50% no-repeat;
+	background: asset_url('admin/exclamation.png', image) 8px 50% no-repeat;
 	background-color: #ffe3e3;
 	border-color: #dd0000;
 	color: #880000;
 }
 
 div.flash.notice {
-    background: asset-url('admin/true.png', image) 8px 5px no-repeat;
+    background: asset_url('admin/true.png', image) 8px 5px no-repeat;
 	background-color: #dfffdf;
 	border-color: #9fcf9f;
 	color: #005f00;
 }
 
 div.flash.warning {
-  background: asset-url('admin/warning.png', image) 8px 5px no-repeat;
+  background: asset_url('admin/warning.png', image) 8px 5px no-repeat;
 	background-color: #FFEBC1;
 	border-color: #FDBF3B;
 	color: #A6750C;
@@ -557,7 +557,7 @@ html>body #ajax-indicator { position: fixed; }
 #ajax-indicator span {
 background-position: 0% 40%;
 background-repeat: no-repeat;
-background-image: asset-url('admin/loading.gif', image);
+background-image: asset_url('admin/loading.gif', image);
 padding-left: 26px;
 vertical-align: bottom;
 }
@@ -573,9 +573,9 @@ table.cal td p.day-num {font-size: 1.1em; text-align:right;}
 table.cal td.odd p.day-num {color: #bbb;}
 table.cal td.today {background:#ffffdd;}
 table.cal td.today p.day-num {font-weight: bold;}
-table.cal .starting a, p.cal.legend .starting {background: asset-url('admin/bullet_go.png', image) no-repeat -1px -2px; padding-left:16px;}
-table.cal .ending a, p.cal.legend .ending {background: asset-url('admin/bullet_end.png', image) no-repeat -1px -2px; padding-left:16px;}
-table.cal .starting.ending a, p.cal.legend .starting.ending {background: asset-url('admin/bullet_diamond.png', image) no-repeat -1px -2px; padding-left:16px;}
+table.cal .starting a, p.cal.legend .starting {background: asset_url('admin/bullet_go.png', image) no-repeat -1px -2px; padding-left:16px;}
+table.cal .ending a, p.cal.legend .ending {background: asset_url('admin/bullet_end.png', image) no-repeat -1px -2px; padding-left:16px;}
+table.cal .starting.ending a, p.cal.legend .starting.ending {background: asset_url('admin/bullet_diamond.png', image) no-repeat -1px -2px; padding-left:16px;}
 p.cal.legend span {display:block;}
 
 /***** Tooltips ******/
@@ -668,12 +668,12 @@ button.tab-left, button.tab-right {
 
 button.tab-left {
 	right: 20px;
-	background: #eeeeee asset-url('admin/bullet_arrow_left.png', image) no-repeat 50% 50%;
+	background: #eeeeee asset_url('admin/bullet_arrow_left.png', image) no-repeat 50% 50%;
 }
 
 button.tab-right {
 	right: 0;
-	background: #eeeeee asset-url('admin/bullet_arrow_right.png', image) no-repeat 50% 50%;
+	background: #eeeeee asset_url('admin/bullet_arrow_right.png', image) no-repeat 50% 50%;
 }
 
 /***** Auto-complete *****/
@@ -729,7 +729,7 @@ div.wiki .external {
     background-position: 0% 60%;
     background-repeat: no-repeat;
     padding-left: 12px;
-    background-image: asset-url('admin/external.png', image);
+    background-image: asset_url('admin/external.png', image);
 }
 
 div.wiki a.new {
@@ -804,11 +804,11 @@ width:12px;
 height:12px;
 background-repeat: no-repeat;
 cursor:pointer;
-background-image:asset-url('admin/close.png', image);
+background-image:asset_url('admin/close.png', image);
 }
 
 a.close-icon:hover {
-background-image:asset-url('admin/close_hl.png', image);
+background-image:asset_url('admin/close_hl.png', image);
 }
 
 /***** Gantt chart *****/
@@ -840,24 +840,24 @@ background-image:asset-url('admin/close_hl.png', image);
 .task.label {width:100%;}
 .task.label.project, .task.label.version { font-weight: bold; }
 
-.task_late { background:#f66 asset-url('admin/task_late.png', image); border: 1px solid #f66; }
-.task_done { background:#00c600 asset-url('admin/task_done.png', image); border: 1px solid #00c600; }  
-.task_todo { background:#aaa asset-url('admin/task_todo.png', image); border: 1px solid #aaa; }
+.task_late { background:#f66 asset_url('admin/task_late.png', image); border: 1px solid #f66; }
+.task_done { background:#00c600 asset_url('admin/task_done.png', image); border: 1px solid #00c600; }  
+.task_todo { background:#aaa asset_url('admin/task_todo.png', image); border: 1px solid #aaa; }
 
 .task_todo.parent { background: #888; border: 1px solid #888; height: 3px;}
 .task_late.parent, .task_done.parent { height: 3px;}
-.task.parent.marker.starting  { position: absolute; background: asset-url('admin/task_parent_end.png', image) no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; left: 0px; top: -1px;}
-.task.parent.marker.ending { position: absolute; background: asset-url('admin/task_parent_end.png', image) no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; right: 0px; top: -1px;}
+.task.parent.marker.starting  { position: absolute; background: asset_url('admin/task_parent_end.png', image) no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; left: 0px; top: -1px;}
+.task.parent.marker.ending { position: absolute; background: asset_url('admin/task_parent_end.png', image) no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; right: 0px; top: -1px;}
 
-.version.task_late { background:#f66 asset-url('admin/milestone_late.png', image); border: 1px solid #f66; height: 2px; margin-top: 3px;}
-.version.task_done { background:#00c600 asset-url('admin/milestone_done.png', image); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
-.version.task_todo { background:#fff asset-url('admin/milestone_todo.png', image); border: 1px solid #fff; height: 2px; margin-top: 3px;}
-.version.marker { background-image:asset-url('admin/version_marker.png', image); background-repeat: no-repeat; border: 0; margin-left: -4px; margin-top: 1px; }
+.version.task_late { background:#f66 asset_url('admin/milestone_late.png', image); border: 1px solid #f66; height: 2px; margin-top: 3px;}
+.version.task_done { background:#00c600 asset_url('admin/milestone_done.png', image); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
+.version.task_todo { background:#fff asset_url('admin/milestone_todo.png', image); border: 1px solid #fff; height: 2px; margin-top: 3px;}
+.version.marker { background-image:asset_url('admin/version_marker.png', image); background-repeat: no-repeat; border: 0; margin-left: -4px; margin-top: 1px; }
 
-.project.task_late { background:#f66 asset-url('admin/milestone_late.png', image); border: 1px solid #f66; height: 2px; margin-top: 3px;}
-.project.task_done { background:#00c600 asset-url('admin/milestone_done.png', image); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
-.project.task_todo { background:#fff asset-url('admin/milestone_todo.png', image); border: 1px solid #fff; height: 2px; margin-top: 3px;}
-.project.marker { background-image:asset-url('admin/project_marker.png', image); background-repeat: no-repeat; border: 0; margin-left: -4px; margin-top: 1px; }
+.project.task_late { background:#f66 asset_url('admin/milestone_late.png', image); border: 1px solid #f66; height: 2px; margin-top: 3px;}
+.project.task_done { background:#00c600 asset_url('admin/milestone_done.png', image); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
+.project.task_todo { background:#fff asset_url('admin/milestone_todo.png', image); border: 1px solid #fff; height: 2px; margin-top: 3px;}
+.project.marker { background-image:asset_url('admin/project_marker.png', image); background-repeat: no-repeat; border: 0; margin-left: -4px; margin-top: 1px; }
 
 .version-behind-schedule a, .issue-behind-schedule a {color: #f66914;}
 .version-overdue a, .issue-overdue a, .project-overdue a {color: #f00;}
@@ -871,58 +871,58 @@ padding-top: 2px;
 padding-bottom: 3px;
 }
 
-.icon-add { background-image: asset-url('admin/add.png', image); }
-.icon-edit { background-image: asset-url('admin/edit.png', image); }
-.icon-copy { background-image: asset-url('admin/copy.png', image); }
-.icon-duplicate { background-image: asset-url('admin/duplicate.png', image); }
-.icon-del { background-image: asset-url('admin/delete.png', image); }
-.icon-move { background-image: asset-url('admin/move.png', image); }
-.icon-save { background-image: asset-url('admin/save.png', image); }
-.icon-cancel { background-image: asset-url('admin/cancel.png', image); }
-.icon-multiple { background-image: asset-url('admin/table_multiple.png', image); }
-.icon-folder { background-image: asset-url('admin/folder.png', image); }
-.open .icon-folder { background-image: asset-url('admin/folder_open.png', image); }
-.icon-package { background-image: asset-url('admin/package.png', image); }
-.icon-home { background-image: asset-url('admin/home.png', image); }
-.icon-user { background-image: asset-url('admin/user.png', image); }
-.icon-projects { background-image: asset-url('admin/projects.png', image); }
-.icon-help { background-image: asset-url('admin/help.png', image); }
-.icon-attachment  { background-image: asset-url('admin/attachment.png', image); }
-.icon-history  { background-image: asset-url('admin/history.png', image); }
-.icon-time  { background-image: asset-url('admin/time.png', image); }
-.icon-time-add  { background-image: asset-url('admin/time_add.png', image); }
-.icon-stats  { background-image: asset-url('admin/stats.png', image); }
-.icon-warning  { background-image: asset-url('admin/warning.png', image); }
-.icon-fav  { background-image: asset-url('admin/fav.png', image); }
-.icon-fav-off  { background-image: asset-url('admin/fav_off.png', image); }
-.icon-reload  { background-image: asset-url('admin/reload.png', image); }
-.icon-lock  { background-image: asset-url('admin/locked.png', image); }
-.icon-unlock  { background-image: asset-url('admin/unlock.png', image); }
-.icon-checked  { background-image: asset-url('admin/true.png', image); }
-.icon-details  { background-image: asset-url('admin/zoom_in.png', image); }
-.icon-report  { background-image: asset-url('admin/report.png', image); }
-.icon-comment  { background-image: asset-url('admin/comment.png', image); }
-.icon-summary  { background-image: asset-url('admin/lightning.png', image); }
-.icon-server-authentication { background-image: asset-url('admin/server_key.png', image); }
-.icon-issue { background-image: asset-url('admin/ticket.png', image); }
-.icon-zoom-in { background-image: asset-url('admin/zoom_in.png', image); }
-.icon-zoom-out { background-image: asset-url('admin/zoom_out.png', image); }
-.icon-changeset { background-image: asset-url('admin/changeset.png', image); }
+.icon-add { background-image: asset_url('admin/add.png', image); }
+.icon-edit { background-image: asset_url('admin/edit.png', image); }
+.icon-copy { background-image: asset_url('admin/copy.png', image); }
+.icon-duplicate { background-image: asset_url('admin/duplicate.png', image); }
+.icon-del { background-image: asset_url('admin/delete.png', image); }
+.icon-move { background-image: asset_url('admin/move.png', image); }
+.icon-save { background-image: asset_url('admin/save.png', image); }
+.icon-cancel { background-image: asset_url('admin/cancel.png', image); }
+.icon-multiple { background-image: asset_url('admin/table_multiple.png', image); }
+.icon-folder { background-image: asset_url('admin/folder.png', image); }
+.open .icon-folder { background-image: asset_url('admin/folder_open.png', image); }
+.icon-package { background-image: asset_url('admin/package.png', image); }
+.icon-home { background-image: asset_url('admin/home.png', image); }
+.icon-user { background-image: asset_url('admin/user.png', image); }
+.icon-projects { background-image: asset_url('admin/projects.png', image); }
+.icon-help { background-image: asset_url('admin/help.png', image); }
+.icon-attachment  { background-image: asset_url('admin/attachment.png', image); }
+.icon-history  { background-image: asset_url('admin/history.png', image); }
+.icon-time  { background-image: asset_url('admin/time.png', image); }
+.icon-time-add  { background-image: asset_url('admin/time_add.png', image); }
+.icon-stats  { background-image: asset_url('admin/stats.png', image); }
+.icon-warning  { background-image: asset_url('admin/warning.png', image); }
+.icon-fav  { background-image: asset_url('admin/fav.png', image); }
+.icon-fav-off  { background-image: asset_url('admin/fav_off.png', image); }
+.icon-reload  { background-image: asset_url('admin/reload.png', image); }
+.icon-lock  { background-image: asset_url('admin/locked.png', image); }
+.icon-unlock  { background-image: asset_url('admin/unlock.png', image); }
+.icon-checked  { background-image: asset_url('admin/true.png', image); }
+.icon-details  { background-image: asset_url('admin/zoom_in.png', image); }
+.icon-report  { background-image: asset_url('admin/report.png', image); }
+.icon-comment  { background-image: asset_url('admin/comment.png', image); }
+.icon-summary  { background-image: asset_url('admin/lightning.png', image); }
+.icon-server-authentication { background-image: asset_url('admin/server_key.png', image); }
+.icon-issue { background-image: asset_url('admin/ticket.png', image); }
+.icon-zoom-in { background-image: asset_url('admin/zoom_in.png', image); }
+.icon-zoom-out { background-image: asset_url('admin/zoom_out.png', image); }
+.icon-changeset { background-image: asset_url('admin/changeset.png', image); }
 
-.icon-file { background-image: asset-url('admin/files/default.png', image); }
-.icon-file.text-plain { background-image: asset-url('admin/files/text.png', image); }
-.icon-file.text-x-c { background-image: asset-url('admin/files/c.png', image); }
-.icon-file.text-x-csharp { background-image: asset-url('admin/files/csharp.png', image); }
-.icon-file.text-x-php { background-image: asset-url('admin/files/php.png', image); }
-.icon-file.text-x-ruby { background-image: asset-url('admin/files/ruby.png', image); }
-.icon-file.text-xml { background-image: asset-url('admin/files/xml.png', image); }
-.icon-file.image-gif { background-image: asset-url('admin/files/image.png', image); }
-.icon-file.image-jpeg { background-image: asset-url('admin/files/image.png', image); }
-.icon-file.image-png { background-image: asset-url('admin/files/image.png', image); }
-.icon-file.image-tiff { background-image: asset-url('admin/files/image.png', image); }
-.icon-file.application-pdf { background-image: asset-url('admin/files/pdf.png', image); }
-.icon-file.application-zip { background-image: asset-url('admin/files/zip.png', image); }
-.icon-file.application-x-gzip { background-image: asset-url('admin/files/zip.png', image); }
+.icon-file { background-image: asset_url('admin/files/default.png', image); }
+.icon-file.text-plain { background-image: asset_url('admin/files/text.png', image); }
+.icon-file.text-x-c { background-image: asset_url('admin/files/c.png', image); }
+.icon-file.text-x-csharp { background-image: asset_url('admin/files/csharp.png', image); }
+.icon-file.text-x-php { background-image: asset_url('admin/files/php.png', image); }
+.icon-file.text-x-ruby { background-image: asset_url('admin/files/ruby.png', image); }
+.icon-file.text-xml { background-image: asset_url('admin/files/xml.png', image); }
+.icon-file.image-gif { background-image: asset_url('admin/files/image.png', image); }
+.icon-file.image-jpeg { background-image: asset_url('admin/files/image.png', image); }
+.icon-file.image-png { background-image: asset_url('admin/files/image.png', image); }
+.icon-file.image-tiff { background-image: asset_url('admin/files/image.png', image); }
+.icon-file.application-pdf { background-image: asset_url('admin/files/pdf.png', image); }
+.icon-file.application-zip { background-image: asset_url('admin/files/zip.png', image); }
+.icon-file.application-x-gzip { background-image: asset_url('admin/files/zip.png', image); }
 
 img.gravatar { 
 	padding: 2px;

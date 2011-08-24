@@ -4,7 +4,7 @@ require "devise/version"
 
 Gem::Specification.new do |spec|
   spec.name = "admin_interface"
-  spec.version = '1.2.1'
+  spec.version = '1.2.2'
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A Rails admin interface generator. Theme stolen from Redmine."
   spec.email = "joost@joopp.com"
