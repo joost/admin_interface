@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "devise/version"
 
 Gem::Specification.new do |spec|
   spec.name = "admin_interface"
-  spec.version = '1.2.2'
+  spec.version = '1.2.3'
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A Rails admin interface generator. Theme stolen from Redmine."
   spec.email = "joost@joopp.com"

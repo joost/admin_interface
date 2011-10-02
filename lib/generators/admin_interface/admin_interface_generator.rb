@@ -32,12 +32,14 @@ class AdminInterfaceGenerator < Rails::Generators::Base
   end
 
   def add_admin_route
-    route "namespace :admin do"
-    route "  root :to => 'base#index"
-    route "  # resources :some_model do"
-    route "  #   delete 'delete_all', :on => :collection"
-    route "  # end"
-    route "end"
+    route <<ROUTE
+namespace :admin do
+    root :to => 'base#index'
+    # resources :some_model do
+    #   delete 'delete_all', :on => :collection
+    # end
+  end
+ROUTE
   end
 
   def show_readme
