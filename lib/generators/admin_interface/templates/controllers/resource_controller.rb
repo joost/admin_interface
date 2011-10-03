@@ -17,9 +17,9 @@ protected
   # Overwrites inherited_resources gem version.
   # Use meta_search and kaminari gem to load collection
   def collection
-    @search ||= end_of_association_chain.search(params[:search])
+    @search ||= end_of_association_chain.search(params[:q])
     get_collection_ivar || begin
-      c = @search.page(params[:page]).per(params[:per])
+      c = @search.result.page(params[:page]).per(params[:per])
       set_collection_ivar(c.respond_to?(:scoped) ? c.scoped : c)
     end
   end

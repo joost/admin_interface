@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name = "admin_interface"
-  spec.version = '1.2.3'
+  spec.version = '1.3.0'
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A Rails admin interface generator. Theme stolen from Redmine."
   spec.email = "joost@joopp.com"
@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
   spec.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme but better ;)."
   spec.authors = ['Joost Hietbrink']
 
-  # kaminari (pagination), meta_search (search), inherited_resources (coolness)
+  # kaminari (pagination), ransack (search), inherited_resources (coolness)
   spec.add_dependency('kaminari', '>= 0.12.4')
-  spec.add_dependency('meta_search', '>= 1.1.0.pre2')
+  spec.add_dependency('ransack')
   spec.add_dependency('inherited_resources', '>= 1.2.2')
 
   spec.files = `git ls-files`.split("\n")

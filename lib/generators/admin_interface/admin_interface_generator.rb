@@ -36,7 +36,7 @@ class AdminInterfaceGenerator < Rails::Generators::Base
 namespace :admin do
     root :to => 'base#index'
     # resources :some_model do
-    #   delete 'delete_all', :on => :collection
+    #   delete 'destroy_all', :on => :collection
     # end
   end
 ROUTE
