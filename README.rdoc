@@ -11,12 +11,11 @@ It also has admin authentication really well implemented.
 
 === Rails 3.1
 
-You should be using v1.2.0+.
+You should be using v1.2.0+ of the Gem. Add the following to your Gemfile.
 
-  gem "admin_interface"
-
-AdminInterface uses several gems. So put these in your Gemfile
-
+  gem 'admin_interface'
+  # Several Gems used by admin_interface
+  gem 'inherited_resources'
   gem 'ransack' # new version of meta_search
   gem 'kaminari' # pagination
   gem 'dynamic_form' # for error_messages_for

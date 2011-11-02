@@ -8,6 +8,14 @@ label.disabled {
   color: lightgray;
 }
 
+/* Copied from .tabular p to make it work with simple_form gem */
+div.input {
+  clear: left;
+  height: 1%;
+  margin: 0;
+  padding: 5px 0 8px 180px;
+}
+
 /***** Custom additions to Redmine *****/
 .icon-search  { background-image: asset_url('admin/search.png', image); }
 .icon-download  { background-image: asset_url('admin/download.png', image); }

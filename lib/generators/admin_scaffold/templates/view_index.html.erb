@@ -1,9 +1,9 @@
 <div class="contextual">
   <%%= link_to 'New <%= singular_name %>', new_admin_<%= singular_name %>_path, :class => 'icon icon-add' %>
-  | <%%= form_for @search, :url => collection_url do |f| %>
+  | <%%= search_form_for @search, :url => collection_url do |f| %>
       <%%
-        # Check https://github.com/ernie/meta_search for options.
-        # Simply change :id_equals into :name_contains, etc.
+        # Check https://github.com/ernie/ransack for options.
+        # Simply change :id_eq into :name_cont, etc.
       %>
       <%%= f.text_field :id_eq, :placeholder => 'Search by ID' %>
     <%% end %>
