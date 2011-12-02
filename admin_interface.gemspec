@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name = "admin_interface"
-  spec.version = '1.3.1'
+  spec.version = '1.4.0'
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A Rails admin interface generator. Theme stolen from Redmine."
   spec.email = "joost@joopp.com"
