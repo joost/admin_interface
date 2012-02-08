@@ -56,7 +56,7 @@ module Admin::BaseHelper
     first = collection.offset_value + 1
     last = [collection.offset_value + collection.limit_value, collection.total_count].min
     total = collection.total_count
-    html = I18n.t('views.pagination_info', :default => "(%{first}-%{last}/%{total})", :first => first, :last => last, :total => total)
+    html = I18n.t('views.pagination_info', :default => "(%{first}-%{last}/%{total})", :first => number_with_delimiter(first), :last => number_with_delimiter(last), :total => number_with_delimiter(total))
     content_tag(:nav, html.html_safe, :class => 'pagination info').html_safe
   end
 

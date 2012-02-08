@@ -27,9 +27,10 @@ class AdminInterfaceGenerator < Rails::Generators::Base
   #   copy_file("views/admin.css", "public/stylesheets/admin.css")
   # end
 
-  def copy_helper_files
-    copy_file("helpers/admin/base_helper.rb", "app/helpers/admin/base_helper.rb")
-  end
+  # Helper files are kept in the Engine Gem.
+  # def copy_helper_files
+  #   copy_file("helpers/admin/base_helper.rb", "app/helpers/admin/base_helper.rb")
+  # end
 
   def add_admin_route
     route <<ROUTE
