@@ -858,6 +858,7 @@ background-image:image-url('admin/close_hl.png');
 .task.parent.marker.starting  { position: absolute; background: image-url('admin/task_parent_end.png') no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; left: 0px; top: -1px;}
 .task.parent.marker.ending { position: absolute; background: image-url('admin/task_parent_end.png') no-repeat 0 0; width: 8px; height: 16px; margin-left: -4px; right: 0px; top: -1px;}
 
+/*
 .version.task_late { background:#f66 image-url('admin/milestone_late.png'); border: 1px solid #f66; height: 2px; margin-top: 3px;}
 .version.task_done { background:#00c600 image-url('admin/milestone_done.png'); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
 .version.task_todo { background:#fff image-url('admin/milestone_todo.png'); border: 1px solid #fff; height: 2px; margin-top: 3px;}
@@ -867,6 +868,7 @@ background-image:image-url('admin/close_hl.png');
 .project.task_done { background:#00c600 image-url('admin/milestone_done.png'); border: 1px solid #00c600; height: 2px; margin-top: 3px;}
 .project.task_todo { background:#fff image-url('admin/milestone_todo.png'); border: 1px solid #fff; height: 2px; margin-top: 3px;}
 .project.marker { background-image:image-url('admin/project_marker.png'); background-repeat: no-repeat; border: 0; margin-left: -4px; margin-top: 1px; }
+*/
 
 .version-behind-schedule a, .issue-behind-schedule a {color: #f66914;}
 .version-overdue a, .issue-overdue a, .project-overdue a {color: #f00;}
@@ -892,7 +894,7 @@ padding-bottom: 3px;
 .icon-folder { background-image: image-url('admin/folder.png'); }
 .open .icon-folder { background-image: image-url('admin/folder_open.png'); }
 .icon-package { background-image: image-url('admin/package.png'); }
-.icon-home { background-image: image-url('admin/home.png'); }
+/*.icon-home { background-image: image-url('admin/home.png'); }*/
 .icon-user { background-image: image-url('admin/user.png'); }
 .icon-user-go { background-image: image-url('admin/user_go.png'); }
 .icon-projects { background-image: image-url('admin/projects.png'); }
