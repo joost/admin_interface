@@ -1,4 +1,9 @@
-# Configure Rails 3.1 to include assets.
+require 'kaminari' # pagination
+require 'ransack' # search
+require 'inherited_resources' # simple controllers
+require 'simple_form' # simple forms
+
+# Configure Rails 3.x to include assets.
 module AdminInterface
 
   class Engine < ::Rails::Engine

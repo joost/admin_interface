@@ -5,7 +5,7 @@
 
 <h2>Editing <%= singular_name %></h2>
 
-<%%= form_for(@<%= singular_name %>, :url => [:admin, @<%= singular_name %>], :html => {:class => 'tabular'}) do |form| %>
+<%%= simple_form_for(@<%= singular_name %>, :url => [:admin, @<%= singular_name %>], :html => {:class => 'tabular'}) do |form| %>
   <%%= form.error_messages %>
 
   <%%= render :partial => form %>
