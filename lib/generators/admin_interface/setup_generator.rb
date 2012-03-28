@@ -2,6 +2,11 @@ module AdminInterface
   module Generators
     class SetupGenerator < Rails::Generators::Base
 
+      desc <<DESC
+Description:
+    Creates admin controller and needed routes.
+DESC
+
       source_root File.expand_path("../templates", __FILE__)
 
       # def copy_image_files
@@ -12,13 +17,13 @@ module AdminInterface
       # end
 
       def copy_controller_files
-        copy_file("controllers/base_controller.rb", "app/controllers/admin/base_controller.rb")
-        copy_file("controllers/resource_controller.rb", "app/controllers/admin/resource_controller.rb")    
+        copy_file("setup/controllers/base_controller.rb", "app/controllers/admin/base_controller.rb")
+        copy_file("setup/controllers/resource_controller.rb", "app/controllers/admin/resource_controller.rb")    
       end
 
       def copy_view_files
-        copy_file("views/layout.html.erb", "app/views/layouts/admin.html.erb")
-        copy_file("views/index.html.erb", "app/views/admin/base/index.html.erb")
+        copy_file("setup/views/layout.html.erb", "app/views/layouts/admin.html.erb")
+        copy_file("setup/views/index.html.erb", "app/views/admin/base/index.html.erb")
       end
 
       # def copy_javascript_files
@@ -36,17 +41,17 @@ module AdminInterface
 
       def add_admin_route
         route <<ROUTE
-    namespace :admin do
-        root :to => 'base#index'
-        # resources :some_model do
-        #   delete 'destroy_all', :on => :collection
-        # end
-      end
-    ROUTE
+namespace :admin do
+    root :to => 'base#index'
+    # resources :some_model do
+    #   delete 'destroy_all', :on => :collection
+    # end
+  end
+ROUTE
       end
 
       def show_readme
-        readme("INSTALL")
+        readme('setup/INSTALL')
       end
 
     end

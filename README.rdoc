@@ -9,48 +9,26 @@ It also has admin authentication really well implemented.
 
 == Install
 
-=== Rails 3.1
+=== Rails 3
 
 You should be using v1.2.0+ of the Gem. Add the following to your Gemfile.
 
   gem 'admin_interface'
 
-=== Earlier Rails Versions
-
-If you're using Rails 3.0 or earlier use
-
-Add following to your Gemfile
-
-  gem "admin_interface", "~> 1.0.0"
-
-Or install as plugin from Github.
-
-  rails plugin install git://github.com/joost/admin_interface.git
-  
 == Usage / Example
 
 === Generate the initial framework (layout, etc.)
 
-  rails generate admin_interface
+  rails generate admin_interface:setup
   
 This will:
-* But some images (stolen from Redmine) into public/images/admin/
 * Create an Admin::BaseController in app/controllers/admin/base_controller.rb
 * Create a layout in app/views/layouts/admin.html.erb
-* Add some jQuery javascripts and CSS
-
-Next, add following routes to config/routes.rb.
-
-  namespace :admin do
-    root :to => 'base#index'
-    # Add the following after you've used the admin_scaffold generator
-    resources :model, :another_model do
-      delete 'destroy_all', :on => :collection
-    end
-  end
 
 Change the app/controllers/admin/base_controller.rb to have a before filter
 only allowing admins to access it.
+
+To view the admin page go to /admin (username: admin, password: admin).
 
 === Generate admin models and controllers
 
@@ -102,4 +80,4 @@ welcome!
 Kudos, credits or whatever you like more go to:
 * Jean-Philippe Lang (creator of {Redmine}[http://www.redmine.org/]).
   
-Copyright (c) 2011 Joost Hietbrink, released under the MIT license
+Copyright (c) 2012 Joost Hietbrink, released under the MIT license

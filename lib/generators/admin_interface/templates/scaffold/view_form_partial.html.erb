@@ -8,9 +8,13 @@
 
 <div class="box">
 <% for attribute in attributes -%>
+  <% if false -%>
+  <!-- This is for normal forms -->
   <p>
     <%%= form.label :<%= attribute.name %> %>
     <%%= form.<%= attribute.field_type %> :<%= attribute.name %> %>
   </p>
+  <% end -%>
+  <%%= form.input :<%= attribute.name %> -%>
 <% end -%>
 </div>

@@ -1,7 +1,12 @@
 require 'rails/generators/resource_helpers'
-class AdminInterface
+module AdminInterface
   module Generators
     class Scaffold < Rails::Generators::NamedBase
+
+      desc <<DESC
+Description:
+    Scaffolds a admin controller and views.
+DESC
 
       # See: http://railsapi.com/doc/rails-v3.0.7/classes/Rails/Generators/ResourceHelpers.html
       include Rails::Generators::ResourceHelpers
@@ -28,7 +33,7 @@ class AdminInterface
       end
 
       def copy_controller_files
-        template 'controller.rb', File.join(CONTROLLER_PATH, class_path, "#{controller_file_name}_controller.rb")
+        template 'scaffold/controller.rb', File.join(CONTROLLER_PATH, class_path, "#{controller_file_name}_controller.rb")
       end
 
       def create_admin_scaffold
@@ -41,13 +46,13 @@ class AdminInterface
 
         for action in scaffold_views
           template(
-            "view_#{action}.html.erb",
+            "scaffold/view_#{action}.html.erb",
             File.join(VIEW_PATH, controller_class_path, controller_file_name, "#{action}.html.erb")
           )
         end
-        template 'view_form_partial.html.erb', File.join(VIEW_PATH, controller_class_path, controller_file_name, "_form.html.erb")
+        template 'scaffold/view_form_partial.html.erb', File.join(VIEW_PATH, controller_class_path, controller_file_name, "_form.html.erb")
 
-        readme 'INSTALL'
+        readme 'scaffold/INSTALL'
       end
 
     private

@@ -1,0 +1,12 @@
+Make sure the following is in your routes files:
+
+  namespace :admin do
+    root :to => 'base#index'
+    resources :model_name do
+      delete 'destroy_all', :on => :collection
+    end
+  end
+
+Next enabled a new tab in app/controllers/admin/base_controller.rb.
+
+Enjoy!

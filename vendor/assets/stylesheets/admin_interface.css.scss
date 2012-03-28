@@ -14,7 +14,6 @@ div.input {
   height: 1%;
   margin: 0;
   padding: 5px 0 8px 180px;
-  border: 1px solid #D7D7D7;
 }
 
 /***** Custom additions to Redmine *****/
@@ -923,6 +922,10 @@ padding-bottom: 3px;
 .icon-call { background-image: image-url('admin/call.gif'); }
 .icon-call-in { background-image: image-url('admin/call_in.png'); }
 .icon-call-out { background-image: image-url('admin/call_out.png'); }
+.icon-slide-show { background-image: image-url('admin/slide_show.png'); }
+.icon-view { background-image: image-url('admin/view.png'); }
+.icon-map { background-image: image-url('admin/map.png'); }
+.icon-world { background-image: image-url('admin/world.png'); }
 
 .icon-file { background-image: image-url('admin/files/default.png'); }
 .icon-file.text-plain { background-image: image-url('admin/files/text.png'); }
@@ -1072,7 +1075,7 @@ input[type="button"], input[type="submit"], input[type="reset"] { background-col
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background-color: #ccccbb; }
 
 /* Fields */
-input[type="text"], input[type="password"], textarea, select { padding: 2px; border: 1px solid #d7d7d7; }
+input[type="text"], input[type="number"], input[type="tel"], input[type="email"], input[type="password"], input[type="url"], textarea, select { padding: 2px; border: 1px solid #d7d7d7; }
 input[type="text"], input[type="password"] { padding: 3px; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { border: 1px solid #888866; }
 option { border-bottom: 1px dotted #d7d7d7; }

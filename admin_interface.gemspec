@@ -9,39 +9,40 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joost Hietbrink"]
-  s.date = "2012-03-21"
+  s.date = "2012-03-28"
   s.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme but better ;)."
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
     "app/helpers/admin/base_helper.rb",
+    "app/helpers/admin/country_select_helper.rb",
+    "config/locales/en.yml",
     "lib/admin_interface.rb",
     "lib/admin_interface/engine.rb",
     "lib/admin_interface/version.rb",
+    "lib/generators/admin_interface/SCAFFOLD_USAGE",
     "lib/generators/admin_interface/USAGE",
-    "lib/generators/admin_interface/admin_interface_generator.rb",
-    "lib/generators/admin_interface/templates/INSTALL",
-    "lib/generators/admin_interface/templates/controllers/base_controller.rb",
-    "lib/generators/admin_interface/templates/controllers/resource_controller.rb",
-    "lib/generators/admin_interface/templates/views/index.html.erb",
-    "lib/generators/admin_interface/templates/views/layout.html.erb",
-    "lib/generators/admin_scaffold/USAGE",
-    "lib/generators/admin_scaffold/admin_scaffold_generator.rb",
-    "lib/generators/admin_scaffold/templates/INSTALL",
-    "lib/generators/admin_scaffold/templates/controller.rb",
-    "lib/generators/admin_scaffold/templates/functional_test.rb",
-    "lib/generators/admin_scaffold/templates/helper.rb",
-    "lib/generators/admin_scaffold/templates/helper_test.rb",
-    "lib/generators/admin_scaffold/templates/layout.html.erb",
-    "lib/generators/admin_scaffold/templates/style.css",
-    "lib/generators/admin_scaffold/templates/view_edit.html.erb",
-    "lib/generators/admin_scaffold/templates/view_form_partial.html.erb",
-    "lib/generators/admin_scaffold/templates/view_index.html.erb",
-    "lib/generators/admin_scaffold/templates/view_list_partial.html.erb",
-    "lib/generators/admin_scaffold/templates/view_new.html.erb",
-    "lib/generators/admin_scaffold/templates/view_show.html.erb",
-    "lib/locales/en.yml"
+    "lib/generators/admin_interface/scaffold_generator.rb",
+    "lib/generators/admin_interface/setup_generator.rb",
+    "lib/generators/admin_interface/templates/scaffold/INSTALL",
+    "lib/generators/admin_interface/templates/scaffold/controller.rb",
+    "lib/generators/admin_interface/templates/scaffold/functional_test.rb",
+    "lib/generators/admin_interface/templates/scaffold/helper.rb",
+    "lib/generators/admin_interface/templates/scaffold/helper_test.rb",
+    "lib/generators/admin_interface/templates/scaffold/layout.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/style.css",
+    "lib/generators/admin_interface/templates/scaffold/view_edit.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/view_form_partial.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/view_index.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/view_list_partial.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/view_new.html.erb",
+    "lib/generators/admin_interface/templates/scaffold/view_show.html.erb",
+    "lib/generators/admin_interface/templates/setup/INSTALL",
+    "lib/generators/admin_interface/templates/setup/controllers/base_controller.rb",
+    "lib/generators/admin_interface/templates/setup/controllers/resource_controller.rb",
+    "lib/generators/admin_interface/templates/setup/views/index.html.erb",
+    "lib/generators/admin_interface/templates/setup/views/layout.html.erb"
   ]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.17"
@@ -54,27 +55,57 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<admin_interface>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_runtime_dependency(%q<ransack>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 1.2.2"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
+      s.add_runtime_dependency(%q<country_code_select>, [">= 0"])
+      s.add_runtime_dependency(%q<dynamic_form>, [">= 0"])
     else
       s.add_dependency(%q<admin_interface>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_dependency(%q<ransack>, [">= 0"])
       s.add_dependency(%q<inherited_resources>, [">= 1.2.2"])
       s.add_dependency(%q<simple_form>, [">= 0"])
+      s.add_dependency(%q<country_code_select>, [">= 0"])
+      s.add_dependency(%q<dynamic_form>, [">= 0"])
     end
   else
     s.add_dependency(%q<admin_interface>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0.12.4"])
     s.add_dependency(%q<ransack>, [">= 0"])
     s.add_dependency(%q<inherited_resources>, [">= 1.2.2"])
     s.add_dependency(%q<simple_form>, [">= 0"])
+    s.add_dependency(%q<country_code_select>, [">= 0"])
+    s.add_dependency(%q<dynamic_form>, [">= 0"])
   end
 end
 

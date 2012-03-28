@@ -1,0 +1,2 @@
+Now add scaffolds using:
+  rails g admin_interface:scaffold YourModel the:string attributes:integer you_want:boolean in_your_admin_interface:string

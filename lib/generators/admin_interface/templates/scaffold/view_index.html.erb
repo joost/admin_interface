@@ -12,7 +12,7 @@
 <h2>
   <%= # FIXME: parent? doesn't always work :S
     link_to(parent.to_s, [:admin, parent]) + " &gt;".html_safe if defined?(parent) && parent?
-   %>
+   -%>
   <%= plural_name.humanize %>
 </h2>
 
@@ -41,7 +41,7 @@
       <td><%%=h <%= singular_name %>.<%= attribute.name %> %></td>
 <% end -%>
       <td class="buttons">
-        <%%= link_to 'Show', [:admin, <%= singular_name %>], :class => 'icon icon-details' %>
+        <%%= link_to 'Show', [:admin, <%= singular_name %>], :class => 'icon icon-view' %>
         <%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(<%= singular_name %>), :class => 'icon icon-edit' %>
         <%%= link_to 'Destroy', [:admin, <%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
       </td>
