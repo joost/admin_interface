@@ -1,5 +1,5 @@
 <div class="contextual">
-  <%%= link_to 'New <%= singular_name %>', new_admin_<%= singular_name %>_path, :class => 'icon icon-add' %>
+  <%%= link_to 'New <%= singular_name.humanize %>', new_admin_<%= singular_name %>_path, :class => 'icon icon-add' %>
   | <%%= search_form_for @search, :url => collection_url do |f| %>
       <%%
         # Check https://github.com/ernie/ransack for options.

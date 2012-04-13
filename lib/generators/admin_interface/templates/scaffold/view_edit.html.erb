@@ -3,7 +3,7 @@
   <%%= link_to 'Destroy', [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
 </div>
 
-<h2>Editing <%= singular_name %></h2>
+<h2>Editing <%= singular_name.humanize %></h2>
 
 <%%= simple_form_for(@<%= singular_name %>, :url => [:admin, @<%= singular_name %>], :html => {:class => 'tabular'}) do |form| %>
   <%%= form.error_messages %>

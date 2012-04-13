@@ -3,7 +3,7 @@
   <%%= link_to 'Destroy', [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
 </div>
 
-<h2><%= singular_name.capitalize %> <%%= @<%= singular_name %>.id %></h2>
+<h2><%= singular_name.humanize %> <%%= @<%= singular_name %>.id %></h2>
 
 <div class="box">
 <% for attribute in attributes -%>
