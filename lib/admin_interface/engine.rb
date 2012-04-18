@@ -1,3 +1,4 @@
+# Require gems
 require 'kaminari' # pagination
 require 'ransack' # search
 require 'inherited_resources' # simple controllers
@@ -15,6 +16,8 @@ module AdminInterface
     # Load helpers
     # FIXME: Does this work correctly with __FILE__ instead of File.dirname(__FILE__)
     config.autoload_paths << File.expand_path("../../../app/helpers", __FILE__)
+    # simple_form gem inputs (for country_helper)
+    # config.autoload_paths << File.expand_path("../../../app/inputs", __FILE__) # FIXME: this seems to be auto loaded
   end
 
 end

@@ -10,7 +10,8 @@ begin
     gem.name = "admin_interface"
     gem.version = AdminInterface::Version::STRING
     gem.summary = "A Rails admin interface generator. Theme stolen from Redmine."
-    gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*"] # FIXME: `git ls-files`.split("\n")
+    # gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*"] # FIXME: The git line below is better?!
+    gem.files = `git ls-files`.split("\n")
     # other fields that would normally go in your gemspec
     # like authors, email and has_rdoc can also be included here
     gem.authors = 'Joost Hietbrink'
