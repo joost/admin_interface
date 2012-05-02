@@ -38,6 +38,12 @@ module Admin::BaseHelper
     time.nil? ? '' : I18n.l(time)
   end
 
+  # This is a replacement for Ransack's sort_link (https://github.com/ernie/ransack/blob/master/lib/ransack/helpers/form_helper.rb).
+  # It works for @search stuff and without @search stuff.
+  def order_link(ransack, attribute, options = {})
+    search ? sort_link(ransack, attribute, options) : attribute.to_s.humanize # FIXME: Model.human_attribute_name("title")
+  end
+
 # Following are extra helper for kaminari gem (pagination).
 # It shows similar to Redmine.
 

@@ -34,9 +34,9 @@ To view the admin page go to /admin (username: admin, password: admin).
 
 Create a scaffold for a model, for example:
 
-  rails generate admin_scaffold post
-  rails generate admin_scaffold post title:string body:text published:boolean
-  rails generate admin_scaffold purchase order_id:integer amount:decimal
+  rails generate admin_interface:scaffold post
+  rails generate admin_interface:scaffold post title:string body:text published:boolean
+  rails generate admin_interface:scaffold purchase order_id:integer amount:decimal
 
 This will:
 * Create stuff similar to original Rails scaffold generator but for admin interface.

@@ -20,8 +20,8 @@ class Admin::BaseController < ApplicationController
 
 private
 
-  ADMIN_USERNAME = 'admin'
-  ADMIN_PASSWORD = 'admin'
+  ADMIN_USERNAME = 'admin' # HTTP Basic admin username
+  ADMIN_PASSWORD = 'admin' # HTTP Basic admin password
 
   def http_authentication
     authenticate_or_request_with_http_basic do |username, password|
