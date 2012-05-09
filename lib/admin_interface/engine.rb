@@ -18,6 +18,9 @@ module AdminInterface
     config.autoload_paths << File.expand_path("../../../app/helpers", __FILE__)
     # simple_form gem inputs (for country_helper)
     # config.autoload_paths << File.expand_path("../../../app/inputs", __FILE__) # FIXME: this seems to be auto loaded
+
+    config.assets.precompile += %w( admin_interface.css admin_interface.jquery.js )
+
   end
 
 end
