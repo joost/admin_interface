@@ -1,6 +1,6 @@
 <div class="contextual">
-  <%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(@<%= singular_name %>), :class => 'icon icon-edit' %>
-  <%%= link_to 'Destroy', [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
+  <%%= link_to t('helpers.links.edit'), edit_admin_<%= singular_name %>_path(@<%= singular_name %>), :class => 'icon icon-edit' %>
+  <%%= link_to t('helpers.links.destroy'), [:admin, @<%= singular_name %>], :confirm => t('helpers.links.confirm'), :method => :delete, :class => 'icon icon-del' %>
 </div>
 
 <h2><%= singular_name.humanize %> <%%= @<%= singular_name %>.id %></h2>
@@ -14,5 +14,5 @@
 <% end -%>
 </div>
 
-<%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(@<%= singular_name %>) %> |
-<%%= link_to 'Back', admin_<%= plural_name %>_path %>
+<%%= link_to t('helpers.links.edit'), edit_admin_<%= singular_name %>_path(@<%= singular_name %>) %> |
+<%%= link_to t('helpers.links.back'), admin_<%= plural_name %>_path %>
