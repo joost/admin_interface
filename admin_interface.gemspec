@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "admin_interface"
-  s.version = "2.1.8"
+  s.version = "2.1.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joost Hietbrink"]
@@ -241,6 +241,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_runtime_dependency(%q<ransack>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 1.2.2"])
@@ -249,6 +251,8 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<dynamic_form>, [">= 0"])
     else
       s.add_dependency(%q<admin_interface>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
@@ -288,6 +292,8 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<admin_interface>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])

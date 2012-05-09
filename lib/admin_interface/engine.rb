@@ -19,7 +19,14 @@ module AdminInterface
     # simple_form gem inputs (for country_helper)
     # config.autoload_paths << File.expand_path("../../../app/inputs", __FILE__) # FIXME: this seems to be auto loaded
 
-    config.assets.precompile += %w( admin_interface.css admin_interface.jquery.js )
+    # Enabling assets precompiling under rails 3.1
+    # See: https://groups.google.com/group/communityengine/browse_thread/thread/7675f6be7320efe2?pli=1
+    if Rails.version >= '3.1'
+      initializer :assets do |config|
+        Rails.application.config.assets.precompile +=
+    %w( admin_interface.css admin_interface.jquery.js )
+      end
+    end 
 
   end
 
