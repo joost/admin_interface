@@ -5,6 +5,6 @@
 
   <%%= render :partial => form %>
 
-    <%%= form.submit 'Create' %>
-    <%%= link_to 'Back', admin_<%= plural_name %>_path %>
+    <%%= form.submit t('helpers.submit.create') %>
+    <%%= link_to t('helpers.links.back'), admin_<%= plural_name %>_path %>
 <%% end %>

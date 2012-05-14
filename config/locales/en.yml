@@ -1,3 +1,13 @@
 en:
   admin_interface:
     # TODO
+  helpers:
+    submit:
+      delete: Delete
+    links:
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      back: Back
+      confirm: 'Are you sure?'
+

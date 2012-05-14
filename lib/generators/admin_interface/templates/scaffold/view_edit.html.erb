@@ -1,6 +1,6 @@
 <div class="contextual">
-  <%%= link_to 'Show', [:admin, @<%= singular_name %>], :class => 'icon icon-view' %>
-  <%%= link_to 'Destroy', [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
+  <%%= link_to t('helpers.links.show'), [:admin, @<%= singular_name %>], :class => 'icon icon-view' %>
+  <%%= link_to t('helpers.links.destroy'), [:admin, @<%= singular_name %>], :confirm => t('helpers.links.confirm'), :method => :delete, :class => 'icon icon-del' %>
 </div>
 
 <h2>Editing <%= singular_name.humanize %></h2>
@@ -10,6 +10,6 @@
 
   <%%= render :partial => form %>
 
-  <%%= form.submit 'Update' %>
-  <%%= link_to 'Back', admin_<%= plural_name %>_path %>
+  <%%= form.submit t('helpers.submit.update') %>
+  <%%= link_to t('helpers.links.back'), admin_<%= plural_name %>_path %>
 <%% end %>
