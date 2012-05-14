@@ -6,7 +6,7 @@
     <title>Admin</title>
     <%= stylesheet_link_tag 'admin_interface' %>
     <%= javascript_include_tag :application, 'admin_interface.jquery.js' %>
-    <%= csrf_meta_tag %> 
+    <%= csrf_meta_tag %>
   </head>
   <body>
     <a name="top"></a>
@@ -16,7 +16,7 @@
             Signed in as <%= '-put code here-' || link_to(current_user, current_user) -%>
             <%= '-logout-' || link_to('logout', logout_path) %>
         </div>
-        <ul><li><a class="home" href="/">Back to main site</a></li></ul>      
+        <ul><li><a class="home" href="/">Back to main site</a></li></ul>
       </div>
       <div id="header">
         <h1><%= link_to 'Admin', admin_root_path %></h1>
@@ -30,12 +30,17 @@
             </ul>
           </div>
         </div>
-      </div> 
+      </div>
       <%= tag('div', {:id => 'main', :class => (has_content?(:sidebar) ? '' : 'nosidebar')}, true) %>
-        <div id="sidebar">        
+        <div id="sidebar">
           <%= yield :sidebar %>
         </div>
         <div id="content">
+          <noscript>
+            <div class="flash error">
+              Your JavaScript seems disabled. The admin interface might not work 100%!
+            </div>
+          </noscript>
           <%= render_flash_messages %>
           <%= yield %>
         </div>
