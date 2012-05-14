@@ -41,9 +41,9 @@
       <td><%%=h <%= singular_name %>.<%= attribute.name %> %></td>
 <% end -%>
       <td class="buttons">
-        <%%= link_to 'Show', [:admin, <%= singular_name %>], :class => 'icon icon-view' %>
-        <%%= link_to 'Edit', edit_admin_<%= singular_name %>_path(<%= singular_name %>), :class => 'icon icon-edit' %>
-        <%%= link_to 'Destroy', [:admin, <%= singular_name %>], :confirm => 'Are you sure?', :method => :delete, :class => 'icon icon-del' %>
+        <%%= link_to t('helpers.links.show'), [:admin, <%= singular_name %>], :class => 'icon icon-view' %>
+        <%%= link_to t('helpers.links.edit'), edit_admin_<%= singular_name %>_path(<%= singular_name %>), :class => 'icon icon-edit' %>
+        <%%= link_to t('helpers.links.destroy'), [:admin, <%= singular_name %>], :confirm => t('helpers.links.confirm'), :method => :delete, :class => 'icon icon-del' %>
       </td>
     </tr>
 <%% end %>
@@ -51,7 +51,7 @@
   <tfoot>
     <tr>
       <th></th>
-      <th colspan="<%= attributes.size %>"><%%= submit_tag "Delete", :confirm => 'Are you sure?' %></th>
+      <th colspan="<%= attributes.size %>"><%%= submit_tag t("helpers.submit.delete"), :confirm => t('helpers.links.confirm') %></th>
       <th></th>
     </tr>
   </tfoot>
