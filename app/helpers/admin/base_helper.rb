@@ -26,6 +26,7 @@ module Admin::BaseHelper
 # Following are other helper methods.
 
   def true_false_image(boolean)
+    return image_tag("admin/dash.png") if boolean.nil?
     raise ArgumentError, "Expected a Boolean as argument!" unless boolean.is_a?(FalseClass) || boolean.is_a?(TrueClass)
     image_tag("admin/#{boolean}.png")
   end
