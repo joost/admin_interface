@@ -31,6 +31,11 @@ module Admin::BaseHelper
     image_tag("admin/#{boolean}.png")
   end
 
+  def true_false_flag_class(boolean)
+    raise ArgumentError, "Expected a Boolean as argument!" unless boolean.is_a?(FalseClass) || boolean.is_a?(TrueClass)
+    boolean ? 'icon-flag_red' : 'icon-flag_black'
+  end
+
   # Overwrites l helper.
   # Make the I18n localize method work with nil dates!
   # Attribute must be Date, DateTime or Time object or nil :)
