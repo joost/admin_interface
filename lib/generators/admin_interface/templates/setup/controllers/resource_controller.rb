@@ -18,7 +18,7 @@ protected
   # Use meta_search and kaminari gem to load collection.
   # Saves the per parameter to the user's session[:admin_per].
   def collection
-    @search ||= end_of_association_chain.search(params[:q])
+    @search ||= end_of_association_chain.ransack(params[:q])
     get_collection_ivar || begin
       session[:admin_per] = params[:per] || session[:admin_per] # Save the per_page to the user's session
       c = @search.result.page(params[:page]).per(session[:admin_per])
