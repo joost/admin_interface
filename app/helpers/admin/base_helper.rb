@@ -32,8 +32,9 @@ module Admin::BaseHelper
   end
 
   def true_false_flag_class(boolean)
+    return 'icon-flag_black' if boolean.nil?
     raise ArgumentError, "Expected a Boolean as argument!" unless boolean.is_a?(FalseClass) || boolean.is_a?(TrueClass)
-    boolean ? 'icon-flag_red' : 'icon-flag_black'
+    boolean ? 'icon-flag_green' : 'icon-flag_red'
   end
 
   # Overwrites l helper.
