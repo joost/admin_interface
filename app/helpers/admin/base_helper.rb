@@ -73,11 +73,11 @@ module Admin::BaseHelper
     content_tag(:nav, html.html_safe, :class => 'pagination info').html_safe
   end
 
-  # Shows a 'Per page: 25 50 100'.
+  # Shows a 'Per page: 25 50 100 500'.
   # Uses I18n 'en.views.perinate' translation key.
   def perinate(collection, options = {})
     return if collection.blank?
-    options.reverse_merge!(:values => [25, 50, 100])
+    options.reverse_merge!(:values => [25, 50, 100, 500])
     page = (collection.offset_value / collection.limit_value).to_i + 1
     html = I18n.t('views.perinate', :default => "Per page: ")
     html += options[:values].collect do |value|
