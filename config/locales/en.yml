@@ -3,6 +3,8 @@ en:
     # TODO
   helpers:
     submit:
+      create: Create
+      update: Update
       delete: Delete
     links:
       show: Show
@@ -10,4 +12,3 @@ en:
       destroy: Destroy
       back: Back
       confirm: 'Are you sure?'
-
