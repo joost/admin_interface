@@ -32,6 +32,11 @@ div.input {
 .icon-flag_green  { background-image: image-url('admin/flag_green.png'); }
 .icon-flag_black  { background-image: image-url('admin/flag_black.png'); }
 .icon-flag_blue  { background-image: image-url('admin/flag_blue.png'); }
+.icon-up_down  { background-image: image-url('admin/arrows_up_down.png'); }
+.icon-menu_enabled  { background-image: image-url('admin/menu_enabled_icon.png'); }
+.icon-menu_disabled  { background-image: image-url('admin/menu_disabled_icon.png'); }
+.icon-mobile  { background-image: image-url('admin/mobile.png'); }
+.icon-book  { background-image: image-url('admin/book.png'); }
 
 tfoot th {
   text-align: left;
@@ -171,7 +176,7 @@ table.list td { vertical-align: top; }
 table.list td.id { width: 2%; text-align: center;}
 table.list td.checkbox { width: 15px; padding: 0px;}
 table.list td.buttons { width: 15%; white-space:nowrap; text-align: right; }
-table.list td.buttons a { padding-right: 0.6em; }
+table.list td.buttons a, td.buttons span { padding-right: 0.6em; }
 table.list caption { text-align: left; padding: 0.5em 0.5em 0.5em 0; }
 
 tr.project td.name a { white-space:nowrap; }
