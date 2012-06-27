@@ -21,6 +21,13 @@ div.input {
   padding: 5px 0 8px 180px;
 }
 
+/* Used to add below simple_form input and add extra info/links to an input */
+div.input-extras {
+  margin: 0;
+  padding: 0 0 8px 180px;
+  margin-top:-6px;
+}
+
 /***** Custom additions to Redmine *****/
 .icon-search  { background-image: image-url('admin/search.png'); }
 .icon-download  { background-image: image-url('admin/download.png'); }
