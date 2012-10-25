@@ -5,6 +5,6 @@
 #
 class CountryCodeInput < SimpleForm::Inputs::Base
   def input
-    @builder.country_code_select(attribute_name, input_options.delete(:priority), input_html_options) #, priority_countries, options)
+    @builder.country_code_select(attribute_name, input_options.delete(:priority) || SimpleForm.country_priority, input_html_options) #, priority_countries, options)
   end
 end

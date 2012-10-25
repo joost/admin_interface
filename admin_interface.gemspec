@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "admin_interface"
-  s.version = "2.2.2"
+  s.version = "2.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joost Hietbrink"]
-  s.date = "2012-06-20"
+  s.date = "2012-10-25"
   s.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme but better ;)."
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -118,6 +118,7 @@ Gem::Specification.new do |s|
     "vendor/assets/images/admin/feed.png",
     "vendor/assets/images/admin/files/c.png",
     "vendor/assets/images/admin/files/csharp.png",
+    "vendor/assets/images/admin/files/csv.png",
     "vendor/assets/images/admin/files/default.png",
     "vendor/assets/images/admin/files/image.png",
     "vendor/assets/images/admin/files/pdf.png",
@@ -274,6 +275,10 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_runtime_dependency(%q<ransack>, [">= 0"])
       s.add_runtime_dependency(%q<inherited_resources>, [">= 1.2.2"])
@@ -282,6 +287,10 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<dynamic_form>, [">= 0"])
     else
       s.add_dependency(%q<admin_interface>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
@@ -343,6 +352,10 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<admin_interface>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
