@@ -28,6 +28,10 @@ div.input-extras {
   margin-top:-6px;
 }
 
+.input.hidden {
+  display:none;
+}
+
 /***** Custom additions to Redmine *****/
 .icon-search  { background-image: image-url('admin/search.png'); }
 .icon-download  { background-image: image-url('admin/download.png'); }
