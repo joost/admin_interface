@@ -5,12 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = "admin_interface"
-  s.version = "2.2.3"
+  s.version = "2.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joost Hietbrink"]
-  s.date = "2012-10-25"
+  s.date = "2013-01-12"
   s.description = "A Rails admin interface generator. Theme stolen from Redmine. Similar to web-app-theme but better ;)."
+  s.email = "joost@joopp.com"
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
@@ -214,6 +215,7 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/admin_interface.jquery.js",
     "vendor/assets/stylesheets/admin_interface.css.scss"
   ]
+  s.homepage = "https://github.com/joost/admin_interface"
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
   s.summary = "A Rails admin interface generator. Theme stolen from Redmine."
@@ -279,9 +281,15 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<geminabox>, [">= 0"])
       s.add_runtime_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_runtime_dependency(%q<ransack>, [">= 0"])
-      s.add_runtime_dependency(%q<inherited_resources>, [">= 1.2.2"])
+      s.add_runtime_dependency(%q<inherited_resources>, ["> 1.2.2"])
       s.add_runtime_dependency(%q<simple_form>, [">= 0"])
       s.add_runtime_dependency(%q<country_code_select>, [">= 0"])
       s.add_runtime_dependency(%q<dynamic_form>, [">= 0"])
@@ -343,9 +351,15 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<geminabox>, [">= 0"])
       s.add_dependency(%q<kaminari>, [">= 0.12.4"])
       s.add_dependency(%q<ransack>, [">= 0"])
-      s.add_dependency(%q<inherited_resources>, [">= 1.2.2"])
+      s.add_dependency(%q<inherited_resources>, ["> 1.2.2"])
       s.add_dependency(%q<simple_form>, [">= 0"])
       s.add_dependency(%q<country_code_select>, [">= 0"])
       s.add_dependency(%q<dynamic_form>, [">= 0"])
@@ -408,9 +422,15 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<geminabox>, [">= 0"])
     s.add_dependency(%q<kaminari>, [">= 0.12.4"])
     s.add_dependency(%q<ransack>, [">= 0"])
-    s.add_dependency(%q<inherited_resources>, [">= 1.2.2"])
+    s.add_dependency(%q<inherited_resources>, ["> 1.2.2"])
     s.add_dependency(%q<simple_form>, [">= 0"])
     s.add_dependency(%q<country_code_select>, [">= 0"])
     s.add_dependency(%q<dynamic_form>, [">= 0"])

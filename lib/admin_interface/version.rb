@@ -3,7 +3,7 @@ module AdminInterface
   module Version
     MAJOR = 2
     MINOR = 2
-    PATCH = 3
+    PATCH = 4
     BUILD = nil
 
     STRING = [MAJOR, MINOR, PATCH, BUILD].compact.join('.')
