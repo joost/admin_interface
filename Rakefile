@@ -23,7 +23,7 @@ begin
     gem.add_dependency('ransack') # search # TODO: Use latest ransack version to overcome "undefined method `table_aliases'" error (see: https://github.com/aka47/ransack/commit/ca5e404ace9e4f2f3feb8e3c9a225db46b3393c3)
     gem.add_dependency('inherited_resources', '> 1.2.2') # simple controllers
     gem.add_dependency('simple_form') # simple forms
-    gem.add_dependency('country_code_select') # country_code_select (similar to country_select gem) used when having country_code attributes in your simple_forms
+    gem.add_dependency('i18n_country_select') # country_code_select (similar to country_select gem) used when having country_code attributes in your simple_forms
     gem.add_dependency('dynamic_form') # error_messages method
 
   end

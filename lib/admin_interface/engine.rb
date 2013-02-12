@@ -4,7 +4,7 @@ require 'ransack' # search
 require 'inherited_resources' # simple controllers
 require 'simple_form' # simple forms
 require 'dynamic_form' # error_messages method
-require 'country_code_select' # country_select when having country_code attributes in your simple_forms
+require 'i18n_country_select' # country_select when having country_code attributes in your simple_forms
 
 # Configure Rails 3.x to include assets.
 module AdminInterface
