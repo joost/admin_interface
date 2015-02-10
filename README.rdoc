@@ -1,4 +1,4 @@
-Deprecated. Please use https://github.com/sferik/rails_admin.
+Deprecated. Please use https://github.com/activeadmin/activeadmin or https://github.com/sferik/rails_admin.
 
 = AdminInterface
 
