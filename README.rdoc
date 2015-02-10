@@ -1,3 +1,5 @@
+Deprecated. Please use https://github.com/sferik/rails_admin.
+
 = AdminInterface
 
 A Rails admin interface generator for Rails 3.1+. Theme stolen from Redmine. Similar to web-app-theme.
